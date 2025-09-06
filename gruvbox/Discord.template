@@ -139,7 +139,7 @@ $HOME/.config/vesktop/themes/GruvyDisc.theme.css
 }
 
 [class^=channelTextArea] {
-    border-bottom: 1px solid va !importantr(--bg3);
+    border-bottom: 1px solid var(--bg3);
 }
 
 div.wrapper_c51b4e {
