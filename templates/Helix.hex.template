@@ -118,31 +118,30 @@ $HOME/.config/helix/themes/gruvbox.toml
 
 
 [palette]
-bg0 = "rgb($bg_1)"   # main background
-bg0_s = "rgb($bg0)"
-bg1 = "rgb($bg1)"
-bg2 = "rgb($bg3)"
-bg3 = "rgb($bg5)"
+bg0 = "rgb($bg2)"   # main background
+bg0_s = "rgb($bg3)"
+bg1 = "rgb($bg4)"
+bg2 = "rgb($bg6)"
+bg3 = "rgb($bg8)"
 
-fg0 = "rgb($fg1)"
-fg1 = "rgb($fg2)" # main foreground
-fg2 = "rgb($fg3)"
-fg3 = "rgb($fg4)"
-fg4 = "rgb($fg4)"
+fg1 = "rgb($fg1)" # main foreground
+fg2 = "rgb($fg2)"
+fg3 = "rgb($fg3)"
+fg4 = "rgb($fg3)"
 
-gray = "rgb($bg6)"
+gray = "rgb($bg9)"
 
-red0 = "rgb($redd)"    # neutral
+red0 = "rgb($red_d)"    # neutral
 red1 = "rgb($red)"    # bright
-green0 = "rgb($greend)"
+green0 = "rgb($green_d)"
 green1 = "rgb($green)"
-yellow0 = "rgb($yellowd)"
+yellow0 = "rgb($yellow_d)"
 yellow1 = "rgb($yellow)"
-blue0 = "rgb($blued)"
+blue0 = "rgb($blue_d)"
 blue1 = "rgb($blue)"
-purple0 = "rgb($purpled)"
+purple0 = "rgb($purple_d)"
 purple1 = "rgb($purple)"
-aqua0 = "rgb($aquad)"
+aqua0 = "rgb($aqua_d)"
 aqua1 = "rgb($aqua)"
-orange0 = "rgb($oranged)"
+orange0 = "rgb($orange_d)"
 orange1 = "rgb($orange)"

@@ -1,99 +1,99 @@
 $HOME/.local/share/konsole/Gruvy.colorscheme
 [Background]
-Color=$bg0
-
-[BackgroundFaint]
-Color=$bg1
-
-[BackgroundIntense]
-Color=$bg_1
-
-[Color0]
-Color=$bg0
-
-[Color0Faint]
 Color=$bg3
 
+[BackgroundFaint]
+Color=$bg4
+
+[BackgroundIntense]
+Color=$bg2
+
+[Color0]
+Color=$bg3
+
+[Color0Faint]
+Color=$bg6
+
 [Color0Intense]
-Color=$bg5
+Color=$bg8
 
 [Color1]
 Color=$red
 
 [Color1Faint]
-Color=$redd
+Color=$red_d
 
 [Color1Intense]
-Color=$redl
+Color=$red_l
 
 [Color2]
 Color=$green
 
 [Color2Faint]
-Color=$greend
+Color=$green_d
 
 [Color2Intense]
-Color=$greenl
+Color=$green_l
 
 [Color3]
 Color=$orange
 
 [Color3Faint]
-Color=$oranged
+Color=$orange_d
 
 [Color3Intense]
-Color=$orangel
+Color=$orange_l
 
 [Color4]
 Color=$blue
 
 [Color4Faint]
-Color=$blued
+Color=$blue_d
 
 [Color4Intense]
-Color=$bluel
+Color=$blue_l
 
 [Color5]
 Color=$purple
 
 [Color5Faint]
-Color=$purpled
+Color=$purple_d
 
 [Color5Intense]
-Color=$purplel
+Color=$purple_l
 
 [Color6]
 Color=$aqua
 
 [Color6Faint]
-Color=$aquad
+Color=$aqua_d
 
 [Color6Intense]
-Color=$aqual
+Color=$aqua_l
 
 [Color7]
-Color=$fg2
+Color=$fg1
 
 [Color7Faint]
-Color=$fg4
+Color=$fg3
 
 [Color7Intense]
-Color=$fg1
+Color=$fg0
 
 [Foreground]
-Color=$fg2
+Color=$fg1
 
 [ForegroundFaint]
-Color=$fg4
+Color=$fg3
 
 [ForegroundIntense]
-Color=$fg1
+Color=$fg0
 
 [General]
 Anchor=0.5,0.5
 Blur=false
 ColorRandomization=false
-Description=Gruvy
+Description=$theme_name
 FillStyle=Tile
 Opacity=1
 Wallpaper=
