@@ -3,7 +3,11 @@
 theme=$1
 if [ ! -f $theme ]; then
   echo "File not found."
+  exit
 fi
+tn=${theme##*/}
+tn=${tn%.*}
+export theme_name="my-${tn}"
 readarray -t a <<< $(grep "^[^#*/;]" $theme | pastel format rgb | sed "s/rgb(//g;s/)//g;s/ //g")
 i=0
 export red_d=${a[((i++))]}
@@ -50,16 +54,19 @@ export bg7=${a[((i++))]}
 export bg8=${a[((i++))]}
 export bg9=${a[((i++))]}
 
-t=$(envsubst <test.txt)
-readarray -t cs <<< $( echo "$t" | grep -o "\$(.\+)" )
-for i in "${cs[@]}"
-do
-  echo "$i"
-  cmd="$( echo "$i" | sed "s/\$(\(.\+\))/\1/" )"
-  echo "$cmd"
-  result="$( eval ${cmd} )"
-  echo "$result"
-  t="$( echo "$t" | sed "s/${i}/${result}/" )"
+for f in ./templates/*.template; do
+  echo "$f"
+  t=$( envsubst <$f )
+  p=$( echo "$t" | sed -n '1p' )
+  readarray -t cs <<< $( echo "$t" | grep -o "\$(.\+)" )
+  # echo ${#cs[@]}
+  for i in "${cs[@]}"; do
+    if [ "$i" == "" ]; then
+      continue
+    fi
+    cmd="$( echo "$i" | sed "s/\$(\(.\+\))/\1/" )"
+    result="$( eval ${cmd} )"
+    t="$( echo "$t" | sed "s/${i}/${result}/" )"
+  done
+  echo "$t" | sed -n '2~1p' > "$p"
 done
-echo
-echo "$t"

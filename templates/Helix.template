@@ -1,4 +1,4 @@
-$HOME/.config/helix/themes/gruvbox.toml
+$HOME/.config/helix/themes/${theme_name}.toml
 "annotation" = { fg = "fg1" }
 
 "attribute" = { fg = "aqua1", modifiers = ["italic"] }
@@ -118,30 +118,30 @@ $HOME/.config/helix/themes/gruvbox.toml
 
 
 [palette]
-bg0 = "rgb($bg2)"   # main background
-bg0_s = "rgb($bg3)"
-bg1 = "rgb($bg4)"
-bg2 = "rgb($bg6)"
-bg3 = "rgb($bg8)"
+bg0 = "$(pastel format hex $bg2)"   # main background
+bg0_s = "$(pastel format hex $bg3)"
+bg1 = "$(pastel format hex $bg4)"
+bg2 = "$(pastel format hex $bg6)"
+bg3 = "$(pastel format hex $bg8)"
 
-fg1 = "rgb($fg1)" # main foreground
-fg2 = "rgb($fg2)"
-fg3 = "rgb($fg3)"
-fg4 = "rgb($fg3)"
+fg1 = "$(pastel format hex $fg1)" # main foreground
+fg2 = "$(pastel format hex $fg2)"
+fg3 = "$(pastel format hex $fg3)"
+fg4 = "$(pastel format hex $fg3)"
 
-gray = "rgb($bg9)"
+gray = "$(pastel format hex $bg9)"
 
-red0 = "rgb($red_d)"    # neutral
-red1 = "rgb($red)"    # bright
-green0 = "rgb($green_d)"
-green1 = "rgb($green)"
-yellow0 = "rgb($yellow_d)"
-yellow1 = "rgb($yellow)"
-blue0 = "rgb($blue_d)"
-blue1 = "rgb($blue)"
-purple0 = "rgb($purple_d)"
-purple1 = "rgb($purple)"
-aqua0 = "rgb($aqua_d)"
-aqua1 = "rgb($aqua)"
-orange0 = "rgb($orange_d)"
-orange1 = "rgb($orange)"
+red0 = "$(pastel format hex $red_d)"    # neutral
+red1 = "$(pastel format hex $red)"    # bright
+green0 = "$(pastel format hex $green_d)"
+green1 = "$(pastel format hex $green)"
+yellow0 = "$(pastel format hex $yellow_d)"
+yellow1 = "$(pastel format hex $yellow)"
+blue0 = "$(pastel format hex $blue_d)"
+blue1 = "$(pastel format hex $blue)"
+purple0 = "$(pastel format hex $purple_d)"
+purple1 = "$(pastel format hex $purple)"
+aqua0 = "$(pastel format hex $aqua_d)"
+aqua1 = "$(pastel format hex $aqua)"
+orange0 = "$(pastel format hex $orange_d)"
+orange1 = "$(pastel format hex $orange)"

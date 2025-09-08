@@ -1,4 +1,4 @@
-$HOME/.local/share/konsole/Gruvy.colorscheme
+$HOME/.local/share/konsole/${theme_name}.colorscheme
 [Background]
 Color=$bg3
 

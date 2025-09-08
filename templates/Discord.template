@@ -1,8 +1,8 @@
-$HOME/.config/vesktop/themes/GruvyDisc.theme.css
+$HOME/.config/vesktop/themes/${theme_name}.theme.css
 /**
-* @name GruvyDisc
+* @name ${theme_name}
 * @author derek_
-* @description A BetterDiscord theme based on gruvbox.
+* @description A BetterDiscord.
 * @version 0.1
 * @source https://www.github.com/frigorific44/themes
 */
@@ -11,41 +11,41 @@ $HOME/.config/vesktop/themes/GruvyDisc.theme.css
 
 .theme-dark {
     /* Palette */
-    --bg-3: rgb($bg0);
-    --bg-2: rgb($bg1);
-    --bg-1: rgb($bg2);
-    --bg0: rgb($bg3);
-    --bg1: rgb($bg4);
-    --bg2: rgb($bg5);
-    --bg3: rgb($bg6);
-    --bg4: rgb($bg7);
-    --bg5: rgb($bg8);
-    --bg6: rgb($bg9);
-    --fg1: rgb($fg0);
-    --fg2: rgb($fg1);
-    --fg3: rgb($fg2);
-    --fg4: rgb($fg3);
-    --redd: rgb($red_d);
-    --oranged: rgb($orange_d);
-    --yellowd: rgb($yellow_d);
-    --greend: rgb($green_d);
-    --aquad: rgb($aqua_d);
-    --blued: rgb($blue_d);
-    --purpled: rgb($purple_d);
-    --red: rgb($red);
-    --orange: rgb($orange);
-    --yellow: rgb($yellow);
-    --green: rgb($green);
-    --aqua: rgb($aqua);
-    --blue: rgb($blue);
-    --purple: rgb($purple);
-    --redl: rgb($red_l);
-    --orangel: rgb($orange_l);
-    --yellowl: rgb($yellow_l);
-    --greenl: rgb($green_l);
-    --aqual: rgb($aqua_l);
-    --bluel: rgb($blue_l);
-    --purplel: rgb($purple_l);
+    --bg-3: $(pastel format rgb $bg0);
+    --bg-2: $(pastel format rgb $bg1);
+    --bg-1: $(pastel format rgb $bg2);
+    --bg0: $(pastel format rgb $bg3);
+    --bg1: $(pastel format rgb $bg4);
+    --bg2: $(pastel format rgb $bg5);
+    --bg3: $(pastel format rgb $bg6);
+    --bg4: $(pastel format rgb $bg7);
+    --bg5: $(pastel format rgb $bg8);
+    --bg6: $(pastel format rgb $bg9);
+    --fg1: $(pastel format rgb $fg0);
+    --fg2: $(pastel format rgb $fg1);
+    --fg3: $(pastel format rgb $fg2);
+    --fg4: $(pastel format rgb $fg3);
+    --redd: $(pastel format rgb $red_d);
+    --oranged: $(pastel format rgb $orange_d);
+    --yellowd: $(pastel format rgb $yellow_d);
+    --greend: $(pastel format rgb $green_d);
+    --aquad: $(pastel format rgb $aqua_d);
+    --blued: $(pastel format rgb $blue_d);
+    --purpled: $(pastel format rgb $purple_d);
+    --red: $(pastel format rgb $red);
+    --orange: $(pastel format rgb $orange);
+    --yellow: $(pastel format rgb $yellow);
+    --green: $(pastel format rgb $green);
+    --aqua: $(pastel format rgb $aqua);
+    --blue: $(pastel format rgb $blue);
+    --purple: $(pastel format rgb $purple);
+    --redl: $(pastel format rgb $red_l);
+    --orangel: $(pastel format rgb $orange_l);
+    --yellowl: $(pastel format rgb $yellow_l);
+    --greenl: $(pastel format rgb $green_l);
+    --aqual: $(pastel format rgb $aqua_l);
+    --bluel: $(pastel format rgb $blue_l);
+    --purplel: $(pastel format rgb $purple_l);
     --transparent: rgba(0,0,0,0);
     /* Meta Variables */
     --m-positive: var(--purpled);

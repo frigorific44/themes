@@ -1,4 +1,4 @@
-$HOME/.local/share/color-schemes/GruvyColors.colors
+$HOME/.local/share/color-schemes/${theme_name}.colors
 [ColorEffects:Disabled]
 Color=56,56,56
 ColorAmount=0
