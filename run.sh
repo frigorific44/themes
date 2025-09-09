@@ -58,7 +58,7 @@ for f in ./templates/*.template; do
   echo "$f"
   t=$( envsubst <$f )
   p=$( echo "$t" | sed -n '1p' )
-  readarray -t cs <<< $( echo "$t" | grep -o "\$(.\+)" )
+  readarray -t cs <<< $( echo "$t" | grep -o "\$([^)]\+)" )
   # echo ${#cs[@]}
   for i in "${cs[@]}"; do
     if [ "$i" == "" ]; then
