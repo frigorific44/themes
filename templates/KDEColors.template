@@ -20,7 +20,7 @@ IntensityAmount=0
 IntensityEffect=0
 
 [Colors:Button]
-BackgroundAlternate=$bg4
+BackgroundAlternate=$bg3
 BackgroundNormal=$bg3
 DecorationFocus=$aqua_d
 DecorationHover=$blue
@@ -48,7 +48,7 @@ ForegroundPositive=$green_l
 ForegroundVisited=$blue_l
 
 [Colors:Tooltip]
-BackgroundAlternate=$bg4
+BackgroundAlternate=$bg3
 BackgroundNormal=$bg3
 DecorationFocus=$aqua_d
 DecorationHover=$blue
@@ -62,7 +62,7 @@ ForegroundPositive=$green_l
 ForegroundVisited=$blue_l
 
 [Colors:View]
-BackgroundAlternate=$bg4
+BackgroundAlternate=$bg3
 BackgroundNormal=$bg3
 DecorationFocus=$aqua_d
 DecorationHover=$blue
@@ -76,7 +76,7 @@ ForegroundPositive=$green_l
 ForegroundVisited=$blue_l
 
 [Colors:Window]
-BackgroundAlternate=$bg4
+BackgroundAlternate=$bg3
 BackgroundNormal=$bg3
 DecorationFocus=$aqua_d
 DecorationHover=$blue
