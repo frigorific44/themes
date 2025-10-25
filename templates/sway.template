@@ -5,3 +5,5 @@ client.focused_inactive  $(fhex "$magenta") $(lighten "$blue" | fhex) $(fhex "$f
 client.unfocused         $(fhex "$magenta") $(darken "$cyan" | fhex) $(darken "$fg" | fhex) $(fhex "$cyan") $(darken "$cyan" | fhex)
 client.urgent            $(fhex "$yellow") $(fhex "$red") $(fhex "$fg") $(fhex "$red") $(fhex "$red")
 client.placeholder       #000000 #0c0c0c $(fhex "$fg") #000000 #0c0c0c
+
+set ${dollar}menu wmenu-run -n $( fhex "$fg" | cut -c2- ) -N $( fhex "$bg" | cut -c2- ) -s $( fhex "$bg" | cut -c2- ) -S $( fhex "$accent" | cut -c2- )

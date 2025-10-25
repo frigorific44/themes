@@ -55,6 +55,8 @@ lighten() {
   pastel lighten 0.15 "$1"
 }
 
+export dollar='$'
+
 for f in ./templates/*.template; do
   echo "$f"
   t=$( envsubst <$f )
