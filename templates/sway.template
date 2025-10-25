@@ -1,0 +1,7 @@
+$HOME/.config/sway/$theme_name
+# target                 border  bg      text    indicator child_border
+client.focused           $(fhex "$accent") $(darken "$accent" | fhex) $(fhex "$fg" | fhex) $(lighten "$accent" | fhex) $(darken "$accent" | fhex)
+client.focused_inactive  $(fhex "$magenta") $(lighten "$blue" | fhex) $(fhex "$fg") $(fhex "$blue") $(lighten "$blue" | fhex)
+client.unfocused         $(fhex "$magenta") $(darken "$cyan" | fhex) $(darken "$fg" | fhex) $(fhex "$cyan") $(darken "$cyan" | fhex)
+client.urgent            $(fhex "$yellow") $(fhex "$red") $(fhex "$fg") $(fhex "$red") $(fhex "$red")
+client.placeholder       #000000 #0c0c0c $(fhex "$fg") #000000 #0c0c0c
