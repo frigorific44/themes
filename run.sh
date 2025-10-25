@@ -8,57 +8,58 @@ fi
 tn=${theme##*/}
 tn=${tn%.*}
 export theme_name="my-${tn}"
-readarray -t a <<< $(grep "^[^#*/;]" $theme | pastel format rgb | sed "s/rgb(//g;s/)//g;s/ //g")
+readarray -t a <<< $(grep "^[^#*/;]" $theme | pastel format OKLch)
 i=0
-export red_d=${a[((i++))]}
+export bg=${a[((i++))]}
+export accent=${a[((i++))]}
+export fg=${a[((i++))]}
+
 export red=${a[((i++))]}
-export red_l=${a[((i++))]}
-
-export orange_d=${a[((i++))]}
-export orange=${a[((i++))]}
-export orange_l=${a[((i++))]}
-
-export yellow_d=${a[((i++))]}
 export yellow=${a[((i++))]}
-export yellow_l=${a[((i++))]}
-
-export green_d=${a[((i++))]}
 export green=${a[((i++))]}
-export green_l=${a[((i++))]}
-
-export aqua_d=${a[((i++))]}
-export aqua=${a[((i++))]}
-export aqua_l=${a[((i++))]}
-
-export blue_d=${a[((i++))]}
+export cyan=${a[((i++))]}
 export blue=${a[((i++))]}
-export blue_l=${a[((i++))]}
+export magenta=${a[((i++))]}
 
-export purple_d=${a[((i++))]}
-export purple=${a[((i++))]}
-export purple_l=${a[((i++))]}
+# export fg0=${a[((i++))]}
+# export fg1=${a[((i++))]}
+# export fg2=${a[((i++))]}
+# export fg3=${a[((i++))]}
 
-export fg0=${a[((i++))]}
-export fg1=${a[((i++))]}
-export fg2=${a[((i++))]}
-export fg3=${a[((i++))]}
+# export bg0=${a[((i++))]}
+# export bg1=${a[((i++))]}
+# export bg2=${a[((i++))]}
+# export bg3=${a[((i++))]}
+# export bg4=${a[((i++))]}
+# export bg5=${a[((i++))]}
+# export bg6=${a[((i++))]}
+# export bg7=${a[((i++))]}
+# export bg8=${a[((i++))]}
+# export bg9=${a[((i++))]}
 
-export bg0=${a[((i++))]}
-export bg1=${a[((i++))]}
-export bg2=${a[((i++))]}
-export bg3=${a[((i++))]}
-export bg4=${a[((i++))]}
-export bg5=${a[((i++))]}
-export bg6=${a[((i++))]}
-export bg7=${a[((i++))]}
-export bg8=${a[((i++))]}
-export bg9=${a[((i++))]}
+fhex() {
+  if [ -n "$1" ]
+  then
+    IN="$1"
+  else
+    read IN
+  fi
+  pastel format hex "$IN"
+}
+
+darken() {
+  pastel darken 0.15 "$1"
+}
+
+lighten() {
+  pastel lighten 0.15 "$1"
+}
 
 for f in ./templates/*.template; do
   echo "$f"
   t=$( envsubst <$f )
   p=$( echo "$t" | sed -n '1p' )
-  readarray -t cs <<< $( echo "$t" | grep -o "\$([^)]\+)" )
+  readarray -t cs <<< $( echo "$t" | grep -o '$([^$]\+)' )
   # echo ${#cs[@]}
   for i in "${cs[@]}"; do
     if [ "$i" == "" ]; then
