@@ -1,10 +1,9 @@
 $HOME/.config/sway/$theme_name
 # target                 border  bg      text    indicator child_border
-client.focused           $(fhex "$accent") $(darken "$accent" | fhex) $(fhex "$fg" | fhex) $(lighten "$accent" | fhex) $(darken "$accent" | fhex)
-client.focused_inactive  $(fhex "$magenta") $(lighten "$blue" | fhex) $(fhex "$fg") $(fhex "$blue") $(lighten "$blue" | fhex)
-client.unfocused         $(fhex "$magenta") $(darken "$cyan" | fhex) $(darken "$fg" | fhex) $(fhex "$cyan") $(darken "$cyan" | fhex)
+client.focused           $(fhex "$accent") $(darken "$accent" | fhex) $(fhex "$fg") $(fhex "$bg") $(fhex "$accent")
+client.focused_inactive  $(fhex "$bg") $(darken "$bg" | fhex) $(fhex "$fg") $(fhex "$accent") $(fhex "$bg")
+client.unfocused         $(lighten "$bg" | fhex) $(darken "$bg" | fhex) $(darken "$fg" | fhex) $(fhex "$bg") $(lighten "$bg" | fhex)
 client.urgent            $(fhex "$yellow") $(fhex "$red") $(fhex "$fg") $(fhex "$red") $(fhex "$red")
-client.placeholder       #000000 #0c0c0c $(fhex "$fg") #000000 #0c0c0c
 
 set ${dollar}menu wmenu-run -n $( fhex "$fg" | cut -c2- ) -N $( fhex "$bg" | cut -c2- ) -s $( fhex "$bg" | cut -c2- ) -S $( fhex "$accent" | cut -c2- )
 set ${dollar}wallpaper bg $(lighten "$bg" | fhex) solid_color
