@@ -7,3 +7,4 @@ client.urgent            $(fhex "$yellow") $(fhex "$red") $(fhex "$fg") $(fhex "
 client.placeholder       #000000 #0c0c0c $(fhex "$fg") #000000 #0c0c0c
 
 set ${dollar}menu wmenu-run -n $( fhex "$fg" | cut -c2- ) -N $( fhex "$bg" | cut -c2- ) -s $( fhex "$bg" | cut -c2- ) -S $( fhex "$accent" | cut -c2- )
+set ${dollar}wallpaper bg $(lighten "$bg" | fhex) solid_color
