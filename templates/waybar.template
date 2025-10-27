@@ -56,7 +56,7 @@ button:hover {
 #workspaces button {
     padding: 0 5px;
     background-color: transparent;
-    color: #ffffff;
+    color: $(fhex "$fg");
 }
 
 #workspaces button:hover {
@@ -64,17 +64,21 @@ button:hover {
 }
 
 #workspaces button.focused, #workspaces button.active {
-    background-color: #64727D;
-    box-shadow: inset 0 -3px #ffffff;
+    background-color: $(lighten "$bg" | fhex);
+    box-shadow: inset 0 -3px $(fhex "$fg");
 }
 
 #workspaces button.urgent {
-    background-color: #eb4d4b;
+    background-color: $(fhex "$red");
 }
 
 #mode {
     background-color: #64727D;
     box-shadow: inset 0 -3px #ffffff;
+}
+
+.modules-right .module {
+    color: $(fhex "$bg");
 }
 
 #clock,
@@ -95,7 +99,6 @@ button:hover {
 #power-profiles-daemon,
 #mpd {
     padding: 0 10px;
-    color: #ffffff;
 }
 
 #window,
@@ -114,7 +117,7 @@ button:hover {
 }
 
 #clock {
-    background-color: #64727D;
+    background-color: $(fhex "$fg");
 }
 
 #battery {
@@ -151,17 +154,14 @@ button:hover {
 
 #power-profiles-daemon.performance {
     background-color: #f53c3c;
-    color: #ffffff;
 }
 
 #power-profiles-daemon.balanced {
     background-color: #2980b9;
-    color: #ffffff;
 }
 
 #power-profiles-daemon.power-saver {
     background-color: #2ecc71;
-    color: #000000;
 }
 
 label:focus {
@@ -169,12 +169,11 @@ label:focus {
 }
 
 #cpu {
-    background-color: #2ecc71;
-    color: #000000;
+    background-color: $(fhex "$green");
 }
 
 #memory {
-    background-color: #9b59b6;
+    background-color: $(fhex "$magenta");
 }
 
 #disk {
@@ -186,26 +185,23 @@ label:focus {
 }
 
 #network {
-    background-color: #2980b9;
+    background-color: $(fhex "$blue");
 }
 
 #network.disconnected {
-    background-color: #f53c3c;
+    background-color: $(fhex "$red");
 }
 
 #pulseaudio {
-    background-color: #f1c40f;
-    color: #000000;
+    background-color: $(fhex "$yellow");
 }
 
 #pulseaudio.muted {
     background-color: #90b1b1;
-    color: #2a5c45;
 }
 
 #wireplumber {
     background-color: #fff0f5;
-    color: #000000;
 }
 
 #wireplumber.muted {
@@ -214,7 +210,6 @@ label:focus {
 
 #custom-media {
     background-color: #66cc99;
-    color: #2a5c45;
     min-width: 100px;
 }
 
@@ -235,7 +230,7 @@ label:focus {
 }
 
 #tray {
-    background-color: #2980b9;
+    background-color: $(fhex "$blue");
 }
 
 #tray > .passive {
@@ -248,17 +243,15 @@ label:focus {
 }
 
 #idle_inhibitor {
-    background-color: #2d3436;
+    background-color: $(lighten "$bg" | fhex);
 }
 
 #idle_inhibitor.activated {
-    background-color: #ecf0f1;
-    color: #2d3436;
+    background-color: $(fhex "$fg");
 }
 
 #mpd {
     background-color: #66cc99;
-    color: #2a5c45;
 }
 
 #mpd.disconnected {
@@ -274,8 +267,7 @@ label:focus {
 }
 
 #language {
-    background: #00b093;
-    color: #740864;
+    background: $(fhex "$cyan");
     padding: 0 5px;
     margin: 0 5px;
     min-width: 16px;
@@ -283,7 +275,6 @@ label:focus {
 
 #keyboard-state {
     background: #97e1ad;
-    color: #000000;
     padding: 0 0px;
     margin: 0 5px;
     min-width: 16px;
@@ -311,7 +302,6 @@ label:focus {
 
 #privacy-item {
     padding: 0 5px;
-    color: white;
 }
 
 #privacy-item.screenshare {
