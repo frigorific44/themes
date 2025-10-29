@@ -1,147 +1,91 @@
 $HOME/.config/helix/themes/${theme_name}.toml
-"annotation" = { fg = "fg1" }
+# Author: Joseph Harrison-Lim <josephharrisonlim@gmail.com>
 
-"attribute" = { fg = "aqua1", modifiers = ["italic"] }
+"attribute" = { fg = "#7060eb", modifiers = ["bold"] }
+"comment" = { fg = "base03", modifiers = ["italic"] }
+"comment.line.documentation" = { fg = "base06", modifiers = ["italic"] }
+"comment.block.documentation" = { fg = "base06", modifiers = ["italic"] }
+"constant" = "base09"
+"constant.character.escape" = "base0C"
+"constant.numeric" = "#7060eb"
+"constructor" = "base0D"
+"function" = "base0D"
+"keyword" = "base0E"
+"keyword.control" = { fg = "base0E", modifiers = ["bold"] }
+"keyword.directive" = "white"
+"keyword.import" = { fg = "#df769b" }
+"keyword.operator" = { fg = "base0E", modifiers = ["italic"] }
+"label" = "base0E"
+"namespace" = "base0E"
+"operator" = "base05"
+"string"  = "base0B"
+"type" = "base10"
+"variable" = "base08"
+"variable.other.member" = "base08"
+"special" = "base0D"
 
-"comment" = { fg = "gray", modifiers = ["italic"] }
+"ui.background" = { bg = "base00" }
+"ui.virtual" = "base03"
+"ui.virtual.ruler" = { bg = "base01" }
+"ui.menu" = { fg = "base05", bg = "base01" }
+"ui.menu.selected" = { fg = "base0B", bg = "base01" }
+"ui.popup" = { bg = "base01" }
+"ui.window" = { bg = "base01" }
+"ui.linenr" = { fg = "#715b63", bg = "base01" }
+"ui.linenr.selected" = { fg = "base02", bg = "base01", modifiers = ["bold"] }
+"ui.selection" = { fg = "base05", bg = "base02" }
+"ui.cursorline" = { bg = "base01" }
+"ui.statusline" = { fg = "base02", bg = "base01" }
+"ui.cursor" = { fg = "base04", modifiers = ["reversed"] }
+"ui.cursor.primary" = { fg = "base05", modifiers = ["reversed"] }
+"ui.text" = "base05"
+"ui.text.focus" = "base05"
+"ui.cursor.match" = { fg = "base0A", modifiers = ["underlined"] }
+"ui.help" = { fg = "base06", bg = "base01" }
 
-"constant" = { fg = "purple1" }
-"constant.character" = { fg = "aqua1" }
-"constant.character.escape" = { fg = "orange1" }
-"constant.macro" = { fg = "aqua1" }
-"constructor" = { fg = "purple1" }
-
-"definition" = { underline = { color = "aqua1" } }
-
-"diagnostic" = { underline = { color = "orange1", style = "curl" } }
-"diagnostic.deprecated" = { modifiers = ["crossed_out"] }
-"diagnostic.error" = { underline = { color = "red1", style = "curl" } }
-"diagnostic.hint" = { underline = { color = "blue1", style = "curl" } }
-"diagnostic.info" = { underline = { color = "aqua1", style = "curl" } }
-"diagnostic.warning" = { underline = { color = "yellow1", style = "curl" } }
-# "diagnostic.unnecessary" = { modifiers = ["dim"] }  # do not remove this for future resolving
-
-"error" = { fg = "red1" }
-"hint" = { fg = "blue1" }
-"info" = { fg = "aqua1" }
-"warning" = { fg = "yellow1" }
-
-"diff.delta" = { fg = "yellow1" }
-"diff.minus" = { fg = "red1" }
-"diff.plus" = { fg = "green1" }
-
-"function" = { fg = "green1" }
-"function.builtin" = { fg = "yellow1" }
-"function.macro" = { fg = "blue1" }
-
-"keyword" = { fg = "red1" }
-"keyword.control.import" = { fg = "aqua1" }
-
-"label" = { fg = "red1" }
-
-"markup.bold" = { modifiers = ["bold"] }
-"markup.heading" = "aqua1"
-"markup.italic" = { modifiers = ["italic"] }
-"markup.link.text" = "red1"
-"markup.link.url" = { fg = "green1", modifiers = ["underlined"] }
-"markup.raw" = "red1"
+"markup.bold" = { fg = "base0A", modifiers = ["bold"] }
+"markup.heading" = "base0D"
+"markup.italic" = { fg = "base0E", modifiers = ["italic"] }
+"markup.link.text" = "base08"
+"markup.link.url" = { fg = "base09", modifiers = ["underlined"] }
+"markup.list" = "base08"
+"markup.quote" = "base0C"
+"markup.raw" = "base0B"
 "markup.strikethrough" = { modifiers = ["crossed_out"] }
 
-"module" = { fg = "aqua1" }
+"diff.delta" = "base09"
+"diff.plus" = "base0B"
+"diff.minus" = "base08"
 
-"namespace" = { fg = "fg1" }
+"diagnostic.info" = { underline = { color = "base0D", style = "curl" } }
+"diagnostic.hint" = { underline = { color = "base03", style = "curl" } }
+"diagnostic.warning" = { underline = { color = "base09", style = "curl" } }
+"diagnostic.error" = { underline = { color = "base08", style = "curl" } }
+"diagnostic.unnecessary" = { modifiers = ["dim"] }
+"diagnostic.deprecated" = { modifiers = ["crossed_out"] }
 
-"operator" = { fg = "purple1" }
-
-"punctuation" = { fg = "orange1" }
-
-"special" = { fg = "purple0" }
-
-"string" = { fg = "green1" }
-"string.regexp" = { fg = "orange1" }
-"string.special" = { fg = "orange1" }
-"string.symbol" = { fg = "yellow1" }
-
-"tag" = { fg = "aqua1" }
-
-"type" = { fg = "yellow1" }
-"type.enum.variant" = { modifiers = ["italic"] }
-
-"ui.background" = { bg = "bg0" }
-"ui.bufferline" = { fg = "fg1", bg = "bg1" }
-"ui.bufferline.active" = { fg = "bg0", bg = "yellow0" }
-"ui.bufferline.background" = { bg = "bg2" }
-
-"ui.cursor" = { fg = "bg1", bg = "bg2" }
-"ui.cursor.insert" = { fg = "bg1", bg = "blue0" }
-"ui.cursor.normal" = { fg = "bg1", bg = "gray" }
-"ui.cursor.select" = { fg = "bg1", bg = "orange0" }
-"ui.cursor.match" = { fg = "fg3", bg = "bg3" }
-
-"ui.cursor.primary" = { bg = "fg3", fg = "bg1" }
-"ui.cursor.primary.insert" = { fg = "bg1", bg = "blue1" }
-"ui.cursor.primary.normal" = { fg = "bg1", bg = "fg3" }
-"ui.cursor.primary.select" = { fg = "bg1", bg = "orange1" }
-
-"ui.cursorline" = { bg = "bg0_s" }
-"ui.cursorline.primary" = { bg = "bg1" }
-
-"ui.help" = { bg = "bg1", fg = "fg1" }
-"ui.linenr" = { fg = "bg3" }
-"ui.linenr.selected" = { fg = "yellow1" }
-"ui.menu" = { fg = "fg1", bg = "bg2" }
-"ui.menu.selected" = { fg = "bg2", bg = "blue1", modifiers = ["bold"] }
-"ui.popup" = { bg = "bg1" }
-"ui.picker.header.column" = { underline.style = "line" }
-"ui.picker.header.column.active" = { modifiers = ["bold"], underline.style = "line" }
-"ui.selection" = { bg = "bg2" }
-"ui.selection.primary" = { bg = "bg3" }
-
-"ui.statusline" = { fg = "fg1", bg = "bg2" }
-"ui.statusline.inactive" = { fg = "fg4", bg = "bg2" }
-"ui.statusline.insert" = { fg = "bg1", bg = "blue1", modifiers = ["bold"] }
-"ui.statusline.normal" = { fg = "bg1", bg = "fg3", modifiers = ["bold"] }
-"ui.statusline.select" = { fg = "bg1", bg = "orange1", modifiers = ["bold"] }
-
-"ui.text" = { fg = "fg1" }
-"ui.virtual.inlay-hint" = { fg = "gray" }
-"ui.virtual.jump-label" = { fg = "purple0", modifiers = ["bold"] }
-"ui.virtual.ruler" = { bg = "bg1" }
-"ui.virtual.whitespace" = "bg2"
-"ui.virtual.wrap" = { fg = "bg2" }
-"ui.window" = { bg = "bg1" }
-
-"variable" = { fg = "fg1" }
-"variable.builtin" = { fg = "orange1", modifiers = ["italic"] }
-"variable.other.member" = { fg = "blue1" }
-"variable.parameter" = { fg = "blue1", modifiers = ["italic"] }
-
+"ui.gutter" = { bg = "base01" }
+"info" = "base0D"
+"hint" = "base03"
+"debug" = "base03"
+"warning" = "base09"
+"error" = "base08"
 
 [palette]
-bg0 = "$(pastel format hex $bg2)"   # main background
-bg0_s = "$(pastel format hex $bg3)"
-bg1 = "$(pastel format hex $bg4)"
-bg2 = "$(pastel format hex $bg6)"
-bg3 = "$(pastel format hex $bg8)"
-
-fg1 = "$(pastel format hex $fg1)" # main foreground
-fg2 = "$(pastel format hex $fg2)"
-fg3 = "$(pastel format hex $fg3)"
-fg4 = "$(pastel format hex $fg3)"
-
-gray = "$(pastel format hex $bg9)"
-
-red0 = "$(pastel format hex $red_d)"    # neutral
-red1 = "$(pastel format hex $red)"    # bright
-green0 = "$(pastel format hex $green_d)"
-green1 = "$(pastel format hex $green)"
-yellow0 = "$(pastel format hex $yellow_d)"
-yellow1 = "$(pastel format hex $yellow)"
-blue0 = "$(pastel format hex $blue_d)"
-blue1 = "$(pastel format hex $blue)"
-purple0 = "$(pastel format hex $purple_d)"
-purple1 = "$(pastel format hex $purple)"
-aqua0 = "$(pastel format hex $aqua_d)"
-aqua1 = "$(pastel format hex $aqua)"
-orange0 = "$(pastel format hex $orange_d)"
-orange1 = "$(pastel format hex $orange)"
+base00 = "#322a2d" # Default Background
+base01 = "#2c2528" # Lighter Background (Used for status bars, line number and folding marks)
+base02 = "#997582" # Selection Background
+base03 = "#585858" # Comments, Invisibles, Line Highlighting
+base04 = "#322a2d" # Dark Foreground (Used for status bars)
+base05 = "#cbbec2" # Default Foreground, Caret, Delimiters, Operators
+base06 = "#e8e8e8" # Light Foreground (Not often used)
+base07 = "#f8f8f8" # Light Background (Not often used)
+base08 = "#e4b781" # Variables, XML Tags, Markup Link Text, Markup Lists, Diff Deleted
+base09 = "#d5971a" # Integers, Boolean, Constants, XML Attributes, Markup Link Url
+base0A = "#df769b" # Classes, Markup Bold, Search Text Background
+base0B = "#49e9a6" # Strings, Inherited Class, Markup Code, Diff Inserted
+base0C = "#16b673" # Support, Regular Expressions, Escape Characters, Markup Quotes
+base0D = "#16a3b6" # Functions, Methods, Attribute IDs, Headings
+base0E = "#ba8baf" # Keywords, Storage, Selector, Markup Italic, Diff Changed
+base0F = "#d67e5c" # Deprecated, Opening/Closing Embedded Language Tags, e.g. <?php ?>
+base10 = "#b0b0ff" # Types
