@@ -64,7 +64,7 @@ button:hover {
 }
 
 #workspaces button.focused, #workspaces button.active {
-    background-color: $(lighten "$bg" | fhex);
+    background-color: $(l-adj "1" "$bg" | fhex);
     box-shadow: inset 0 -3px $(fhex "$fg");
 }
 
@@ -243,7 +243,7 @@ label:focus {
 }
 
 #idle_inhibitor {
-    background-color: $(lighten "$bg" | fhex);
+    background-color: $(l-adj "1" "$bg" | fhex);
 }
 
 #idle_inhibitor.activated {

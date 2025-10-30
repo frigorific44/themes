@@ -47,12 +47,22 @@ fhex() {
   pastel format hex "$IN"
 }
 
-darken() {
-  pastel darken 0.15 "$1"
-}
-
-lighten() {
-  pastel lighten 0.15 "$1"
+# Lightness adjustment in the OKLch/OKLab color space.
+l_step="0.04"
+l-adj() {
+  amount="$1"
+  if [ -n "$2" ]
+  then
+    color="$2"
+  else
+    read color
+  fi
+  l="$(pastel format oklch-lightness "$color")"
+  c="$(pastel format oklch-chroma "$color")"
+  h="$(pastel format oklch-hue "$color")"
+  calc="$l + ( $amount * $l_step )"
+  l="$(echo "$calc" | bc)"
+  echo "OkLCh(${l}, ${c}, ${h})"
 }
 
 export dollar='$'
