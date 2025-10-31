@@ -1,19 +1,19 @@
 $HOME/.config/kitty/theme.conf
-foreground $(fhex "$fg")
-background $(fhex "$bg")
-color0 $(fhex "$bg")
-color1 $(l-adj "-1" "$red" | fhex)
-color2 $(l-adj "-1" "$green" | fhex)
-color3 $(l-adj "-1" "$yellow" | fhex)
-color4 $(l-adj "-1" "$blue" | fhex)
-color5 $(l-adj "-1" "$magenta" | fhex)
-color6 $(l-adj "-1" "$cyan" | fhex)
-color7 $(l-adj "-1" "$fg" | fhex)
-color8 $(l-adj "1" "$bg" | fhex)
-color9 $(fhex "$red")
-color10 $(fhex "$green")
-color11 $(fhex "$yellow")
-color12 $(fhex "$blue")
-color13 $(fhex "$magenta")
-color14 $(fhex "$cyan")
-color15 $(fhex "$fg")
+foreground %(fhex "$fg")%
+background %(fhex "$bg")%
+color0 %(fhex "$bg")%
+color1 %(l-adj "-1" "$red" | fhex)%
+color2 %(l-adj "-1" "$green" | fhex)%
+color3 %(l-adj "-1" "$yellow" | fhex)%
+color4 %(l-adj "-1" "$blue" | fhex)%
+color5 %(l-adj "-1" "$magenta" | fhex)%
+color6 %(l-adj "-1" "$cyan" | fhex)%
+color7 %(l-adj "-1" "$fg" | fhex)%
+color8 %(l-adj "1" "$bg" | fhex)%
+color9 %(fhex "$red")%
+color10 %(fhex "$green")%
+color11 %(fhex "$yellow")%
+color12 %(fhex "$blue")%
+color13 %(fhex "$magenta")%
+color14 %(fhex "$cyan")%
+color15 %(fhex "$fg")%

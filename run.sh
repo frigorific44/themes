@@ -71,15 +71,19 @@ for f in ./templates/*.template; do
   echo "$f"
   t=$( envsubst <$f )
   p=$( echo "$t" | sed -n '1p' )
-  readarray -t cs <<< $( echo "$t" | grep -o '$([^$]\+)' )
+  readarray -t cs <<< $( echo "$t" | grep -o '%([^%]\+)%' )
   # echo ${#cs[@]}
   for i in "${cs[@]}"; do
     if [ "$i" == "" ]; then
       continue
     fi
-    cmd="$( echo "$i" | sed "s/\$(\(.\+\))/\1/" )"
+    # echo "$i"
+    cmd="${i:2:-2}"
+    # echo "$cmd"
     result="$( eval ${cmd} )"
+    # echo "$result"
     t="$( echo "$t" | sed "s/${i}/${result}/" )"
+    # echo
   done
   echo "$t" | sed -n '2~1p' > "$p"
 done

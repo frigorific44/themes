@@ -6,8 +6,8 @@ $HOME/.config/waybar/style.css
 }
 
 window#waybar {
-    background-color: $(fhex "$bg");
-    color: $(fhex "$fg");
+    background-color: %(fhex "$bg")%;
+    color: %(fhex "$fg")%;
     transition-property: background-color;
     transition-duration: .5s;
 }
@@ -56,7 +56,7 @@ button:hover {
 #workspaces button {
     padding: 0 5px;
     background-color: transparent;
-    color: $(fhex "$fg");
+    color: %(fhex "$fg")%;
 }
 
 #workspaces button:hover {
@@ -64,12 +64,12 @@ button:hover {
 }
 
 #workspaces button.focused, #workspaces button.active {
-    background-color: $(l-adj "1" "$bg" | fhex);
-    box-shadow: inset 0 -3px $(fhex "$fg");
+    background-color: %(l-adj "1" "$bg" | fhex)%;
+    box-shadow: inset 0 -3px %(fhex "$fg")%;
 }
 
 #workspaces button.urgent {
-    background-color: $(fhex "$red");
+    background-color: %(fhex "$red")%;
 }
 
 #mode {
@@ -78,7 +78,7 @@ button:hover {
 }
 
 .modules-right .module {
-    color: $(fhex "$bg");
+    color: %(fhex "$bg")%;
 }
 
 #clock,
@@ -117,7 +117,7 @@ button:hover {
 }
 
 #clock {
-    background-color: $(fhex "$fg");
+    background-color: %(fhex "$fg")%;
 }
 
 #battery {
@@ -169,11 +169,11 @@ label:focus {
 }
 
 #cpu {
-    background-color: $(fhex "$green");
+    background-color: %(fhex "$green")%;
 }
 
 #memory {
-    background-color: $(fhex "$magenta");
+    background-color: %(fhex "$magenta")%;
 }
 
 #disk {
@@ -185,15 +185,15 @@ label:focus {
 }
 
 #network {
-    background-color: $(fhex "$blue");
+    background-color: %(fhex "$blue")%;
 }
 
 #network.disconnected {
-    background-color: $(fhex "$red");
+    background-color: %(fhex "$red")%;
 }
 
 #pulseaudio {
-    background-color: $(fhex "$yellow");
+    background-color: %(fhex "$yellow")%;
 }
 
 #pulseaudio.muted {
@@ -230,7 +230,7 @@ label:focus {
 }
 
 #tray {
-    background-color: $(fhex "$blue");
+    background-color: %(fhex "$blue")%;
 }
 
 #tray > .passive {
@@ -243,11 +243,11 @@ label:focus {
 }
 
 #idle_inhibitor {
-    background-color: $(l-adj "1" "$bg" | fhex);
+    background-color: %(l-adj "1" "$bg" | fhex)%;
 }
 
 #idle_inhibitor.activated {
-    background-color: $(fhex "$fg");
+    background-color: %(fhex "$fg")%;
 }
 
 #mpd {
@@ -267,7 +267,7 @@ label:focus {
 }
 
 #language {
-    background: $(fhex "$cyan");
+    background: %(fhex "$cyan")%;
     padding: 0 5px;
     margin: 0 5px;
     min-width: 16px;
@@ -317,5 +317,5 @@ label:focus {
 }
 
 #custom-power {
-    color: $(fhex "$fg");
+    color: %(fhex "$fg")%;
 }
