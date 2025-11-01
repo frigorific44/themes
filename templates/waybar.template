@@ -78,7 +78,7 @@ button:hover {
 }
 
 .modules-right .module {
-    color: %(fhex "$bg")%;
+    color: %(fhex "$fg")%;
 }
 
 #clock,
@@ -114,10 +114,6 @@ button:hover {
 /* If workspaces is the rightmost module, omit right margin */
 .modules-right > widget:last-child > #workspaces {
     margin-right: 0;
-}
-
-#clock {
-    background-color: %(fhex "$fg")%;
 }
 
 #battery {
@@ -168,14 +164,6 @@ label:focus {
     background-color: #000000;
 }
 
-#cpu {
-    background-color: %(fhex "$green")%;
-}
-
-#memory {
-    background-color: %(fhex "$magenta")%;
-}
-
 #disk {
     background-color: #964B00;
 }
@@ -184,21 +172,18 @@ label:focus {
     background-color: #90b1b1;
 }
 
-#network {
-    background-color: %(fhex "$blue")%;
-}
-
 #network.disconnected {
+    color: %(fhex "$fg")%;
     background-color: %(fhex "$red")%;
 }
 
-#pulseaudio {
-    background-color: %(fhex "$yellow")%;
-}
+/* #pulseaudio { */
+    /* background-color: %(fhex "$yellow")%; */
+/* } */
 
-#pulseaudio.muted {
-    background-color: #90b1b1;
-}
+/* #pulseaudio.muted { */
+    /* background-color: #90b1b1; */
+/* } */
 
 #wireplumber {
     background-color: #fff0f5;
@@ -227,10 +212,6 @@ label:focus {
 
 #temperature.critical {
     background-color: #eb4d4b;
-}
-
-#tray {
-    background-color: %(fhex "$blue")%;
 }
 
 #tray > .passive {
@@ -267,7 +248,6 @@ label:focus {
 }
 
 #language {
-    background: %(fhex "$cyan")%;
     padding: 0 5px;
     margin: 0 5px;
     min-width: 16px;
@@ -314,8 +294,4 @@ label:focus {
 
 #privacy-item.audio-out {
     background-color: #0069d4;
-}
-
-#custom-power {
-    color: %(fhex "$fg")%;
 }
