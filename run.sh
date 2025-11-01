@@ -21,22 +21,6 @@ export cyan=${a[((i++))]}
 export blue=${a[((i++))]}
 export magenta=${a[((i++))]}
 
-# export fg0=${a[((i++))]}
-# export fg1=${a[((i++))]}
-# export fg2=${a[((i++))]}
-# export fg3=${a[((i++))]}
-
-# export bg0=${a[((i++))]}
-# export bg1=${a[((i++))]}
-# export bg2=${a[((i++))]}
-# export bg3=${a[((i++))]}
-# export bg4=${a[((i++))]}
-# export bg5=${a[((i++))]}
-# export bg6=${a[((i++))]}
-# export bg7=${a[((i++))]}
-# export bg8=${a[((i++))]}
-# export bg9=${a[((i++))]}
-
 fhex() {
   if [ -n "$1" ]
   then
