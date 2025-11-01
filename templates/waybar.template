@@ -1,7 +1,7 @@
 $HOME/.config/waybar/style.css
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: FontAwesome, Urbanist, Roboto, Helvetica, Arial, sans-serif;
+    font-family: "SpaceMono Nerd Font Mono", FontAwesome, "Space Mono", Urbanist, Roboto, Helvetica, Arial, sans-serif;
     font-size: 13px;
 }
 
