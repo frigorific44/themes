@@ -232,19 +232,19 @@ label:focus {
 }
 
 #mpd {
-    background-color: #66cc99;
+    color: %(fhex "$green")%;
 }
 
 #mpd.disconnected {
-    background-color: #f53c3c;
+    color: %(fhex "$red")%;
 }
 
 #mpd.stopped {
-    background-color: #90b1b1;
+    color: %(fhex "$fg")%;
 }
 
 #mpd.paused {
-    background-color: #51a37a;
+    color: %(l-adj "-4" "$green" | fhex)%;
 }
 
 #language {
