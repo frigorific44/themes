@@ -1,18 +1,39 @@
 #!/bin/bash
 
-theme=$1
-if [ ! -f $theme ]; then
-  echo "File not found."
-  exit
+swatch_str="███abc"
+swatch() {
+  for color in "$@"; do
+    pastel paint -n -o "${1}" "$color" "$swatch_str"
+    echo
+  done
+}
+
+# If no arguments, exit.
+if [[ $# -lt 1 ]]; then
+    echo "Requires at least one theme path."
+    exit
 fi
 
-swatch_str="███abc"
-# tn=${theme##*/}
-# tn=${tn%.*}
-# export theme_name="my-${tn}"
-readarray -t palette1 <<< $(grep "^[^#*/;]" $theme)
+# Only one theme.
+if [[ $# -eq 1 ]]; then
+  theme=$1
+  if [ ! -f $theme ]; then
+    echo "File not found."
+    exit
+  fi
+  readarray -t palette <<< $(grep "^[^#*/;]" $theme)
+  swatch "${palette[@]}"
+fi
 
-for color in "${palette1[@]}"; do
-  pastel paint -n -o "${palette1[0]}" "$color" "$swatch_str"
-  echo
-done
+if [[ $# -eq 2 ]]; then
+  theme1=$1
+  theme2=$2
+  if [ ! -f $theme ]; then
+    echo "File not found."
+    exit
+  fi
+  readarray -t palette1 <<< $(grep "^[^#*/;]" $theme1)
+  readarray -t palette2 <<< $(grep "^[^#*/;]" $theme2)
+  swatch "${palette1[@]}"
+  swatch "${palette2[@]}"
+fi
