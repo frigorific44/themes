@@ -1,3 +1,4 @@
+$HOME/.config/vesktop/themes/${theme_name}-system24.theme.css
 /**
  * @name system24 (${theme_name}) 
  * @description a tui-style discord theme.
@@ -86,29 +87,29 @@ body {
     --colors: on; /* off: discord default colors, on: midnight custom colors */
 
     /* text colors */
-    --text-0: var(--bg-2); /* text on colored elements */
-    --text-1: $(pastel format hsl $fg3); /* other normally white text */
-    --text-2: color-mix(in oklab, var(--text-1), var(--text-3) 50%); /* headings and important text */
-    --text-3: $(pastel format hsl $fg2); /* normal text */
-    --text-4: $(pastel format hsl $fg1); /* icon buttons and channels */
-    --text-5: $(pastel format hsl $fg0); /* muted channels/chats and timestamps */
+    --text-0: var(--bg-4); /* text on colored elements */
+    --text-1: %(l-adj "2" "$fg" | fhex)%; /* other normally white text */
+    --text-2: %(l-adj "1" "$fg" | fhex)%; /* headings and important text */
+    --text-3: %(fhex "$fg")%; /* normal text */
+    --text-4: %(l-adj "-1" "$fg" | fhex)%; /* icon buttons and channels */
+    --text-5: %(l-adj "-2" "$fg" | fhex)%; /* muted channels/chats and timestamps */
 
     /* background and dark colors */
-    --bg-1: $(pastel format hsl $bg6); /* dark buttons when clicked */
-    --bg-2: $(pastel format hsl $bg5); /* dark buttons */
-    --bg-3: $(pastel format hsl $bg4); /* spacing, secondary elements */
-    --bg-4: $(pastel format hsl $bg3); /* main background color */
-    --hover: color-mix(in oklab, $(pastel format hsl $bg7) 10%, transparent); /* channels and buttons when hovered */
-    --active: color-mix(in oklab, $(pastel format hsl $bg7) 20%, transparent); /* channels and buttons when clicked or selected */
-    --active-2: color-mix(in oklab, $(pastel format hsl $bg7) 30%, transparent); /* extra state for transparent buttons */
-    --message-hover: hsla(250deg, 0%, 0%, 0.1); /* messages when hovered */
+    --bg-1: %(l-adj "3" "$bg" | fhex)%; /* dark buttons when clicked */
+    --bg-2: %(l-adj "2" "$bg" | fhex)%; /* dark buttons */
+    --bg-3: %(l-adj "1" "$bg" | fhex)%; /* spacing, secondary elements */
+    --bg-4: %(fhex "$bg")%; /* main background color */
+    --hover: color-mix(in oklab, %(l-adj "6" "$bg" | fhex)% 10%, transparent); /* channels and buttons when hovered */
+    --active: color-mix(in oklab, %(l-adj "6" "$bg" | fhex)% 20%, transparent); /* channels and buttons when clicked or selected */
+    --active-2: color-mix(in oklab, %(l-adj "6" "$bg" | fhex)% 30%, transparent); /* extra state for transparent buttons */
+    --message-hover: var(--hover); /* messages when hovered */
 
     /* accent colors */
-    --accent-1: $(pastel format hsl $purple_l); /* links and other accent text */
-    --accent-2: color-mix(in oklab, var(--accent-1), var(--accent-3) 50%); /* small accent elements */
-    --accent-3: $(pastel format hsl $purple); /* accent buttons */
-    --accent-4: color-mix(in oklab, var(--accent-3), var(--accent-5) 50%); /* accent buttons when hovered */
-    --accent-5: $(pastel format hsl $purple_d); /* accent buttons when clicked */
+    --accent-1: %(fhex "$accent")%; /* links and other accent text */
+    --accent-2: %(l-adj "-1" "$accent" | fhex)%; /* small accent elements */
+    --accent-3: %(l-adj "-2" "$accent" | fhex)%; /* accent buttons */
+    --accent-4: %(l-adj "-3" "$accent" | fhex)%; /* accent buttons when hovered */
+    --accent-5: %(l-adj "-4" "$accent" | fhex)%; /* accent buttons when clicked */
     --accent-new: var(--red-2); /* stuff that's normally red like mute/deafen buttons */
     --mention: linear-gradient(to right, color-mix(in hsl, var(--accent-2), transparent 90%) 40%, transparent); /* background of messages that mention you */
     --mention-hover: linear-gradient(to right, color-mix(in hsl, var(--accent-2), transparent 95%) 40%, transparent); /* background of messages that mention you when hovered */
@@ -130,33 +131,33 @@ body {
 
     /* base colors */
     /* 2nd and 3rd colors are the default rose pine moon palette */
-    --red-1: $(pastel format hsl $red_l);
-    --red-2: color-mix(in oklab, var(--red-1), var(--red-3) 50%);
-    --red-3: $(pastel format hsl $red);
-    --red-4: color-mix(in oklab, var(--red-3), var(--red-5) 50%);
-    --red-5: $(pastel format hsl $red_d);
+    --red-1: %(fhex "$red")%;
+    --red-2: %(l-adj "-1" "$red" | fhex)%;
+    --red-3: %(l-adj "-2" "$red" | fhex)%;
+    --red-4: %(l-adj "-3" "$red" | fhex)%;
+    --red-5: %(l-adj "-4" "$red" | fhex)%;
 
-    --green-1: $(pastel format hsl $green_l);
-    --green-2: color-mix(in oklab, var(--green-1), var(--green-3) 50%);
-    --green-3: $(pastel format hsl $green);
-    --green-4: color-mix(in oklab, var(--green-3), var(--green-5) 50%);
-    --green-5: $(pastel format hsl $green_d);
+    --green-1: %(fhex "$green")%;
+    --green-2: %(l-adj "-1" "$green" | fhex)%;
+    --green-3: %(l-adj "-2" "$green" | fhex)%;
+    --green-4: %(l-adj "-3" "$green" | fhex)%;
+    --green-5: %(l-adj "-4" "$green" | fhex)%;
 
-    --blue-1: $(pastel format hsl $aqua_l);
-    --blue-2: color-mix(in oklab, var(--aqua-1), var(--aqua-3) 50%);
-    --blue-3: $(pastel format hsl $aqua);
-    --blue-4: color-mix(in oklab, var(--aqua-3), var(--aqua-5) 50%);
-    --blue-5: $(pastel format hsl $aqua_d);
+    --blue-1: %(fhex "$blue")%;
+    --blue-2: %(l-adj "-1" "$blue" | fhex)%;
+    --blue-3: %(l-adj "-2" "$blue" | fhex)%;
+    --blue-4: %(l-adj "-3" "$blue" | fhex)%;
+    --blue-5: %(l-adj "-4" "$blue" | fhex)%;
 
-    --yellow-1: $(pastel format hsl $yellow_l);
-    --yellow-2: color-mix(in oklab, var(--yellow-1), var(--yellow-3) 50%);
-    --yellow-3: $(pastel format hsl $yellow);
-    --yellow-4: color-mix(in oklab, var(--yellow-3), var(--yellow-5) 50%);
-    --yellow-5: $(pastel format hsl $yellow_d);
+    --yellow-1: %(fhex "$yellow")%;
+    --yellow-2: %(l-adj "-1" "$yellow" | fhex)%;
+    --yellow-3: %(l-adj "-2" "$yellow" | fhex)%;
+    --yellow-4: %(l-adj "-3" "$yellow" | fhex)%;
+    --yellow-5: %(l-adj "-4" "$yellow" | fhex)%;
 
-    --purple-1: $(pastel format hsl $blue_l);
-    --purple-2: color-mix(in oklab, var(--blue-1), var(--blue-3) 50%);
-    --purple-3: $(pastel format hsl $blue);
-    --purple-4: color-mix(in oklab, var(--blue-3), var(--blue-5) 50%);
-    --purple-5: $(pastel format hsl $blue_d);
+    --purple-1: %(fhex "$magenta")%;
+    --purple-2: %(l-adj "-1" "$magenta" | fhex)%;
+    --purple-3: %(l-adj "-2" "$magenta" | fhex)%;
+    --purple-4: %(l-adj "-3" "$magenta" | fhex)%;
+    --purple-5: %(l-adj "-4" "$magenta" | fhex)%;
 }
