@@ -17,12 +17,12 @@ $HOME/.config/rmpc/themes/${theme_name}.ron
     preview_metadata_group_style: (fg: "yellow", modifiers: "Bold"),
     tab_bar: (
         enabled: true,
-        active_style: (fg: "black", bg: "blue", modifiers: "Bold"),
+        active_style: (fg: "black", bg: "light_green", modifiers: "Bold"),
         inactive_style: (),
     ),
-    highlighted_item_style: (fg: "blue", modifiers: "Bold"),
-    current_item_style: (fg: "black", bg: "blue", modifiers: "Bold"),
-    borders_style: (fg: "blue"),
+    highlighted_item_style: (fg: "light_green", modifiers: "Bold"),
+    current_item_style: (fg: "black", bg: "green", modifiers: "Bold"),
+    borders_style: (fg: "dark_gray"),
     highlight_border_style: (fg: "blue"),
     symbols: (
         song: "S",
@@ -42,29 +42,29 @@ $HOME/.config/rmpc/themes/${theme_name}.ron
         trace: (fg: "magenta", bg: "black"),
     ),
     progress_bar: (
-        symbols: ["", "█", "▞", " ", ""],
-        track_style: (fg: "blue"),
-        elapsed_style: (fg: "blue"),
-        thumb_style: (fg: "blue"),
+        symbols: ["━", "━", "⭘", "━", "━"],
+        track_style: (fg: "dark_gray"),
+        elapsed_style: (fg: "green"),
+        thumb_style: (fg: "green"),
     ),
     scrollbar: (
-        symbols: ["│", "█", "▲", "▼"],
+        symbols: ["┃", "█", "󰄿", "󰄼"],
         track_style: (),
         ends_style: (),
-        thumb_style: (fg: "blue"),
+        thumb_style: (fg: "light_yellow"),
     ),
     song_table_format: [
         (
             prop: (kind: Property(Artist),
                 default: (kind: Text("Unknown"))
             ),
-            width: "20%",
+            width: "30%",
         ),
         (
             prop: (kind: Property(Title),
                 default: (kind: Text("Unknown"))
             ),
-            width: "35%",
+            width: "40%",
         ),
         (
             prop: (kind: Property(Album), style: (fg: "white"),
@@ -76,80 +76,65 @@ $HOME/.config/rmpc/themes/${theme_name}.ron
             prop: (kind: Property(Duration),
                 default: (kind: Text("-"))
             ),
-            width: "15%",
+            width: "9",
             alignment: Right,
         ),
     ],
-    components: {},
-    layout: Split(
-        direction: Vertical,
-        panes: [
-            (
-                pane: Pane(Header),
-                size: "2",
-            ),
-            (
-                pane: Pane(Tabs),
-                size: "3",
-            ),
-            (
-                pane: Pane(TabContent),
-                size: "100%",
-            ),
-            (
-                pane: Pane(ProgressBar),
-                size: "1",
-            ),
-        ],
-    ),
-    header: (
-        rows: [
-            (
-                left: [
+    components: {
+        "custom-header": Split(direction: Vertical, panes: [
+            (size: "1", pane: Split(direction: Horizontal, panes: [
+                (size: "25%", pane: Pane(Property(align: Left, content: [
                     (kind: Text("["), style: (fg: "yellow", modifiers: "Bold")),
-                    (kind: Property(Status(StateV2(playing_label: "Playing", paused_label: "Paused", stopped_label: "Stopped"))), style: (fg: "yellow", modifiers: "Bold")),
-                    (kind: Text("]"), style: (fg: "yellow", modifiers: "Bold"))
-                ],
-                center: [
+                    (kind: Property(Status(State)), style: (fg: "yellow", modifiers: "Bold")),
+                    (kind: Text("]"), style: (fg: "yellow", modifiers: "Bold")),
+                ]))),
+                (size: "50%", pane: Pane(Property(align: Center, content: [
                     (kind: Property(Song(Title)), style: (modifiers: "Bold"),
                         default: (kind: Text("No Song"), style: (modifiers: "Bold"))
                     )
-                ],
-                right: [
+                ]))),
+                (size: "25%", pane: Pane(Property(align: Right, content: [
                     (kind: Property(Widget(ScanStatus)), style: (fg: "blue")),
-                    (kind: Property(Widget(Volume)), style: (fg: "blue"))
-                ]
-            ),
-            (
-                left: [
+                    (kind: Property(Widget(Volume)), style: (fg: "blue")),
+                ]))),
+            ])),
+            (size: "1", pane: Pane(Property(align: Center, content: [
+                (kind: Property(Song(Artist)), style: (fg: "yellow", modifiers: "Bold"), default: (
+                    kind: Text("Unknown"), style: (fg: "yellow", modifiers: "Bold")
+                )),
+                (kind: Text(" - ")),
+                (kind: Property(Song(Album)), default: (kind: Text("Unknown Album")))
+            ]))),
+            (size: "1", pane: Split(direction: Horizontal, panes: [
+                (size: "60%", pane: Pane(Property(align: Left, content: [
+                    (kind: Property(Widget(States(
+                        active_style: (fg: "white", modifiers: "Bold"),
+                        separator_style: (fg: "white")
+                    ))),
+                        style: (fg: "dark_gray")
+                    ),
+                ]))),
+                (size: "40%", pane: Pane(Property(align: Right, content: [
                     (kind: Property(Status(Elapsed))),
                     (kind: Text(" / ")),
                     (kind: Property(Status(Duration))),
                     (kind: Text(" (")),
                     (kind: Property(Status(Bitrate))),
-                    (kind: Text(" kbps)"))
-                ],
-                center: [
-                    (kind: Property(Song(Artist)), style: (fg: "yellow", modifiers: "Bold"),
-                        default: (kind: Text("Unknown"), style: (fg: "yellow", modifiers: "Bold"))
-                    ),
-                    (kind: Text(" - ")),
-                    (kind: Property(Song(Album)),
-                        default: (kind: Text("Unknown Album"))
-                    )
-                ],
-                right: [
-                    (
-                        kind: Property(Widget(States(
-                            active_style: (fg: "white", modifiers: "Bold"),
-                            separator_style: (fg: "white")))
-                        ),
-                        style: (fg: "dark_gray")
-                    ),
-                ]
-            ),
+                    (kind: Text(" kbps)")),
+                ]))),
+            ])),
+            (size: "1", pane: Pane(ProgressBar)),
+        ]),
+    },
+    layout: Split(
+        direction: Vertical,
+        panes: [
+            (size: "5", borders: "TOP", pane: Component("custom-header")),
+            (size: "3", pane: Pane(Tabs)),
+            (size: "100%", pane: Pane(TabContent)),
         ],
     ),
+    header: (rows: []),
     browser_song_format: [
         (
             kind: Group([
