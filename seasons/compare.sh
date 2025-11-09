@@ -1,11 +1,13 @@
 #!/bin/bash
 
-swatch_str="███abc"
 swatch() {
   for color in "$@"; do
-    pastel paint -n -o "${1}" "$color" "$swatch_str"
-    echo
+    pastel paint -n -o "${1}" "$color" "███"
   done
+  for color in "$@"; do
+    pastel paint -n -o "${1}" "$color" "abc"
+  done
+  echo
 }
 
 # If no arguments, exit.
@@ -32,8 +34,9 @@ if [[ $# -eq 2 ]]; then
     echo "File not found."
     exit
   fi
-  readarray -t palette1 <<< $(grep "^[^#*/;]" $theme1)
-  readarray -t palette2 <<< $(grep "^[^#*/;]" $theme2)
-  swatch "${palette1[@]}"
-  swatch "${palette2[@]}"
+  for i in {0..4}; do
+    mix=$(echo "scale=2; $i / 4" | bc -l)
+    readarray -t palette <<< $(./interpolate.sh "$theme1" "$theme2" "$mix")
+    swatch "${palette[@]}"
+  done
 fi
