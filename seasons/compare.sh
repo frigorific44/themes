@@ -34,8 +34,8 @@ if [[ $# -eq 2 ]]; then
     echo "File not found."
     exit
   fi
-  for i in {0..4}; do
-    mix=$(echo "scale=2; $i / 4" | bc -l)
+  for i in {0..8}; do
+    mix=$(echo "scale=2; $i / 8" | bc -l)
     readarray -t palette <<< $(./interpolate.sh "$theme1" "$theme2" "$mix")
     swatch "${palette[@]}"
   done
