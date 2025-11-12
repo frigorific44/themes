@@ -1,5 +1,8 @@
 #!/bin/bash
 
+initial_wd=`pwd`
+cd "$( dirname -- "${BASH_SOURCE[0]}" )"
+
 theme=$1
 if [ ! -f $theme ]; then
   echo "File not found."
@@ -71,3 +74,5 @@ for f in ./templates/*.template; do
   done
   echo "$t" | sed -n '2~1p' > "$p"
 done
+
+cd "$initial_wd"
