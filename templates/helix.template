@@ -73,7 +73,7 @@ $HOME/.config/helix/themes/${theme_name}.toml
 
 [palette]
 base00 = "%(fhex "$bg")%" # Default Background
-base01 = "%(l-adj "-2" "$bg" | fhex)%" # Lighter Background (Used for status bars, line number and folding marks)
+base01 = "%(l-adj "-1" "$bg" | fhex)%" # Lighter Background (Used for status bars, line number and folding marks)
 base02 = "#997582" # Selection Background
 base03 = "#585858" # Comments, Invisibles, Line Highlighting
 base04 = "%(fhex "$bg")%" # Dark Foreground (Used for status bars)
