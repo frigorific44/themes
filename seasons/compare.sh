@@ -12,7 +12,11 @@ swatch() {
 
 # If no arguments, exit.
 if [[ $# -lt 1 ]]; then
-    echo "Requires at least one theme path."
+    echo "${0} <theme1>"
+    echo "Outputs a single theme's color swatch."
+    echo
+    echo "${0} <theme1> <theme2>"
+    echo "Outputs a series of color swatches, interpolating between the two themes."
     exit
 fi
 
@@ -26,7 +30,7 @@ if [[ $# -eq 1 ]]; then
   readarray -t palette <<< $(grep "^[^#*/;]" $theme)
   swatch "${palette[@]}"
 fi
-
+# Two themes.
 if [[ $# -eq 2 ]]; then
   theme1=$1
   theme2=$2

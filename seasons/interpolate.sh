@@ -3,6 +3,7 @@
 # If no arguments, exit.
 if [[ $# -ne 3 ]]; then
     echo "${0} <theme1> <theme2> <mix-fraction>"
+    echo "Outputs an inteprolation between the two themes, with mix 0.0 and 1.0 being equivalent to theme1 and theme2, respectively."
     exit
 fi
 

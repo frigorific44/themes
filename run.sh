@@ -3,6 +3,13 @@
 initial_wd=`pwd`
 cd "$( dirname -- "${BASH_SOURCE[0]}" )"
 
+# If no arguments, exit.
+if [[ $# -lt 1 ]]; then
+    echo "${0} <theme1>"
+    echo "Injects each template with the theme's palette and copies the new theme configuration files to their corresponding locations."
+    exit
+fi
+
 theme=$1
 if [ ! -f $theme ]; then
   echo "File not found."
@@ -13,6 +20,7 @@ tn=${tn%.*}
 export theme_name="my-${tn}"
 readarray -t a <<< $(grep "^[^#*/;]" $theme | pastel format OKLch)
 i=0
+# All themes follow the same sequence of colors.
 export bg=${a[((i++))]}
 export accent=${a[((i++))]}
 export fg=${a[((i++))]}
@@ -24,6 +32,7 @@ export cyan=${a[((i++))]}
 export blue=${a[((i++))]}
 export magenta=${a[((i++))]}
 
+# Shorthand for hex formatting.
 fhex() {
   if [ -n "$1" ]
   then
