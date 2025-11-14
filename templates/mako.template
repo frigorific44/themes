@@ -1,0 +1,5 @@
+$HOME/.config/mako/config
+background-color=%(fhex "$bg")%
+text-color=%(fhex "$fg")%
+border-color=%(fhex "$accent")%
+progress-color=over %(fhex "$accent")%
