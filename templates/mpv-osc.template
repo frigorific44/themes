@@ -1,0 +1,11 @@
+$HOME/.config/mpv/script-opts/osc.conf
+background_color=%(fhex "$bg")%
+timecode_color=%(fhex "$fg")%
+title_color=%(fhex "$fg")%
+time_pos_color=%(fhex "$fg")%
+time_pos_outline_color=%(fhex "$fg")%
+buttons_color=%(fhex "$fg")%
+top_buttons_color=%(fhex "$fg")%
+small_buttonsL_color=%(fhex "$fg")%
+small_buttonsR_color=%(fhex "$fg")%
+held_element_color=%(fhex "$fg")%
