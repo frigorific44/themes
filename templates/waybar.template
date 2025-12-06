@@ -48,6 +48,17 @@ button:hover {
     box-shadow: inset 0 -3px #ffffff;
 }
 
+tooltip {
+    background: %(l-adj "-1" "$bg" | fhex)%;
+    border-radius: 0;
+    border-color: %(fhex "$accent")%;
+    border-width: 2px;
+}
+
+tooltip label {
+    color: %(fhex "$fg")%;
+}
+
 /* you can set a style on hover for any module like this */
 #pulseaudio:hover {
     background-color: #a37800;
