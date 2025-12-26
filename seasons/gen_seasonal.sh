@@ -2,7 +2,6 @@
 
 initial_wd=`pwd`
 cd "$( dirname -- "${BASH_SOURCE[0]}" )"
-# cp "./3-Autumn.theme" "./../themes/seasonal.theme"
 filename() {
   path="$1"
   fname="${path##*/}"
@@ -22,7 +21,7 @@ start_theme="${seasons[-1]}"
 start_year=$year
 
 end_theme="${seasons[0]}"
-end_year=($year + 1)
+end_year=$(( year + 1 ))
 seasons_size="${#seasons[@]}"
 for ((i = 0; i < seasons_size; i++)); do
   theme_date=$(filename "${seasons[i]}")
@@ -48,7 +47,7 @@ sec_start=$(epoch_seconds $start_date)
 echo $start_theme
 echo $start_date
 echo $sec_start
-end_date=$start_year-$(filename "$end_theme")
+end_date=$end_year-$(filename "$end_theme")
 sec_end=$(epoch_seconds $end_date)
 echo $end_theme
 echo $end_date
