@@ -13,49 +13,42 @@ epoch_seconds() {
   echo $(date --date="${1}" +"%s")
 }
 
-year=$(date +"%Y")
+year_curr=$(date +"%Y")
 sec_curr=$(date +"%s")
 
 seasons=(./*.theme)
-start_theme="${seasons[-1]}"
-start_year=$year
 
-end_theme="${seasons[0]}"
-end_year=$(( year + 1 ))
-seasons_size="${#seasons[@]}"
-for ((i = 0; i < seasons_size; i++)); do
-  theme_date=$(filename "${seasons[i]}")
-  sec_theme=$(epoch_seconds "${year}-${theme_date}")
-
-  if [[ $sec_curr -lt $sec_theme ]]; then
-    end_theme="${seasons[i]}"
-    end_year=$year
-    start_index=(i - 1)
-    if [[ $start_index -lt 0 ]]; then
-      start_theme="${seasons[(i - 1)]}"
-      start_year=($year - 1)
+start_diff=-99999999
+end_diff=99999999
+for theme in "${seasons[@]}"; do
+  for ((year = year_curr - 1; year <= year_curr + 1; year++ )); do
+    theme_date=$(filename "${theme}")
+    sec_theme=$(epoch_seconds "${year}-${theme_date}")
+    theme_diff=$(( sec_theme - sec_curr ))
+    if [[ $theme_diff -lt 0 ]]; then
+      if [[ $theme_diff -gt $start_diff ]]; then
+        start_diff="$theme_diff"
+        start_theme="$theme"
+        start_year="$year"
+        start_sec="$sec_theme"
+      fi
     else
-      start_theme="${seasons[(i - 1)]}"
-      start_year=$year
+      if [[ $theme_diff -lt $end_diff ]]; then
+        end_diff="$theme_diff"
+        end_theme="$theme"
+        end_year="$year"
+        end_sec="$sec_theme"
+      fi
     fi
-    break 
-  fi
+  done
 done
 
-start_date=$start_year-$(filename "$start_theme")
-sec_start=$(epoch_seconds $start_date)
+echo $start_year
 echo $start_theme
-echo $start_date
-echo $sec_start
-end_date=$end_year-$(filename "$end_theme")
-sec_end=$(epoch_seconds $end_date)
+echo $end_year
 echo $end_theme
-echo $end_date
-echo $sec_end
-echo
-proportion=$(echo "scale=4;($sec_curr - $sec_start) / ($sec_end - $sec_start)" | bc)
-echo $season_total
-echo $season_curr
+
+proportion=$(echo "scale=4;($sec_curr - $start_sec) / ($end_sec - $start_sec)" | bc)
 echo $proportion
 
 ./interpolate.sh "$start_theme" "$end_theme" "$proportion" > ../themes/seasonal.theme
