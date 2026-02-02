@@ -95,6 +95,8 @@ tooltip label {
 #clock,
 #battery,
 #cpu,
+#custom-todo,
+#custom-updates,
 #memory,
 #disk,
 #temperature,
