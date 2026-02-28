@@ -1,7 +1,7 @@
 $HOME/.config/waybar/style.css
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: FontAwesome, "SpaceMono Nerd Font", "Space Mono", Urbanist, Roboto, Helvetica, Arial, sans-serif;
+    font-family: FontAwesome, "SpaceMono Nerd Font Propo", "Space Mono", Roboto, Helvetica, Arial, sans-serif;
     font-size: 13px;
 }
 
@@ -14,24 +14,6 @@ window#waybar {
 
 window#waybar.hidden {
     opacity: 0.2;
-}
-
-/*
-window#waybar.empty {
-    background-color: transparent;
-}
-window#waybar.solo {
-    background-color: #FFFFFF;
-}
-*/
-
-window#waybar.termite {
-    background-color: #3F3F3F;
-}
-
-window#waybar.chromium {
-    background-color: #000000;
-    border: none;
 }
 
 button {
@@ -88,45 +70,25 @@ tooltip label {
     box-shadow: inset 0 -3px #ffffff;
 }
 
+.module {
+    /* background: black; */
+    padding: 0 8px;
+}
+
+.modules-left .module {
+    margin-right: 4px;
+}
+
+.modules-center .module {
+    margin-left: 2px;
+}
+
 .modules-right .module {
-    color: %(fhex "$fg")%;
+    margin-left: 4px;
 }
 
-#clock,
-#battery,
-#cpu,
-#custom-todo,
-#custom-updates,
-#memory,
-#disk,
-#temperature,
-#backlight,
-#network,
-#pulseaudio,
-#wireplumber,
-#custom-media,
-#tray,
-#mode,
-#idle_inhibitor,
-#scratchpad,
-#power-profiles-daemon,
-#mpd {
-    padding: 0 10px;
-}
-
-#window,
 #workspaces {
-    margin: 0 4px;
-}
-
-/* If workspaces is the leftmost module, omit left margin */
-.modules-left > widget:first-child > #workspaces {
-    margin-left: 0;
-}
-
-/* If workspaces is the rightmost module, omit right margin */
-.modules-right > widget:last-child > #workspaces {
-    margin-right: 0;
+    padding: 0;
 }
 
 #battery {
@@ -157,10 +119,6 @@ tooltip label {
     animation-direction: alternate;
 }
 
-#power-profiles-daemon {
-    padding-right: 15px;
-}
-
 #power-profiles-daemon.performance {
     background-color: #f53c3c;
 }
@@ -175,10 +133,6 @@ tooltip label {
 
 label:focus {
     background-color: #000000;
-}
-
-#disk {
-    background-color: #964B00;
 }
 
 #backlight {
@@ -209,14 +163,6 @@ label:focus {
 #custom-media {
     background-color: #66cc99;
     min-width: 100px;
-}
-
-#custom-media.custom-spotify {
-    background-color: #66cc99;
-}
-
-#custom-media.custom-vlc {
-    background-color: #ffa000;
 }
 
 #temperature.critical {
