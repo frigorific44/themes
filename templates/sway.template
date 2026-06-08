@@ -5,5 +5,5 @@ client.focused_inactive  %(fhex "$bg")% %(l-adj "-1" "$bg" | fhex)% %(fhex "$fg"
 client.unfocused         %(l-adj "1" "$bg" | fhex)% %(l-adj "-1" "$bg" | fhex)% %(l-adj "-1" "$fg" | fhex)% %(fhex "$bg")% %(l-adj "1" "$bg" | fhex)%
 client.urgent            %(fhex "$yellow")% %(fhex "$red")% %(fhex "$fg")% %(fhex "$red")% %(fhex "$red")%
 
-set ${dollar}menu j4-dmenu-desktop --dmenu="wmenu -i -f 'monospace Normal 15' -n %( fhex "$fg" | cut -c2- )% -N %( fhex "$bg" | cut -c2- )% -s %( fhex "$bg" | cut -c2- )% -S %( fhex "$accent" | cut -c2- )%"
+set ${dollar}menu j4-dmenu-desktop --dmenu="wmenu -i -f 'SpaceMono Nerd Font, Normal 14' -n %( fhex "$fg" | cut -c2- )% -N %( fhex "$bg" | cut -c2- )% -s %( fhex "$bg" | cut -c2- )% -S %( fhex "$accent" | cut -c2- )%"
 set ${dollar}wallpaper bg %(l-adj "1" "$bg" | fhex)% solid_color
