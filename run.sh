@@ -43,6 +43,18 @@ fhex() {
   pastel format hex "$IN"
 }
 
+# Shorthand for hex formatting without the hash symbol.
+ftrimhex() {
+  if [ -n "$1" ]
+  then
+    IN="$1"
+  else
+    read IN
+  fi
+  hx="$(pastel format hex "$IN")"
+  echo "${hx:1}"
+}
+
 # Lightness adjustment in the OKLch/OKLab color space.
 l_step="0.04"
 l-adj() {
