@@ -64,10 +64,17 @@ $HOME/projects/themes/dist/userChrome.css
   --toolbarbutton-icon-fill: var(--text-3) !important;
   --toolbar-text-color: var(--text-3) !important;
 
+  --focus-outline-color: var(--accent-1) !important;
+  
+  /* Buttons */
+  --button-background-color: var(--bg-2) !important;
+  --urlbar-box-background-color: var(--bg-2) !important;
+
   /* Address Bar */
   --toolbar-field-text-color: var(--accent-1) !important;
   --toolbar-field-text-color-focus: var(--accent-1) !important;
   --toolbar-field-background-color: rgba(0, 0, 0, 0.0) !important;
+  --toolbar-field-background-color-focus: var(--bg-3) !important;
 
   /* Panels */
   --panel-background-color: var(--bg-4) !important;
