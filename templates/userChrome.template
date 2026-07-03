@@ -64,6 +64,11 @@ $HOME/projects/themes/dist/userChrome.css
   --toolbarbutton-icon-fill: var(--text-3) !important;
   --toolbar-text-color: var(--text-3) !important;
 
+  /* Address Bar */
+  --toolbar-field-text-color: var(--accent-1) !important;
+  --toolbar-field-text-color-focus: var(--accent-1) !important;
+  --toolbar-field-background-color: rgba(0, 0, 0, 0.0) !important;
+
   /* Tab Groups */
   --tab-group-label-text-dark: var(--bg-4) !important;
   
