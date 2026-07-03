@@ -54,8 +54,52 @@ $HOME/projects/themes/dist/userChrome.css
   --purple-5: %(l-adj "-4" "$magenta" | fhex)%;
 
   --toolbox-background-color: var(--bg-4) !important;
+  --toolbox-background-color-inactive: var(--bg-4) !important;
+  --toolbox-text-color: var(--text-3) !important;
+  --toolbox-text-color-inactive: var(--text-3) !important;
+  --tab-selected-textcolor: var(--text-2) !important;
+
   --toolbar-background-color: var(--bg-3) !important;
   --tab-background-color-selected: var(--bg-3) !important;
   --toolbarbutton-icon-fill: var(--text-3) !important;
   --toolbar-text-color: var(--text-3) !important;
+
+  /* Tab Groups */
+  --tab-group-label-text-dark: var(--bg-4) !important;
+  
+  --tab-group-color-blue: rgba(0, 0, 0, 0.0) !important;
+  --tab-group-color-blue-invert: var(--text-3) !important;
+  --tab-group-color-blue-pale: var(--text-3) !important;
+  
+  --tab-group-color-purple: rgba(0, 0, 0, 0.0) !important;
+  --tab-group-color-purple-invert: var(--text-3) !important;
+  --tab-group-color-purple-pale: var(--text-3) !important;
+  
+  --tab-group-color-cyan: rgba(0, 0, 0, 0.0) !important;
+  --tab-group-color-cyan-invert: var(--text-3) !important;
+  --tab-group-color-cyan-pale: var(--text-3) !important;
+  
+  --tab-group-color-orange: rgba(0, 0, 0, 0.0) !important;
+  --tab-group-color-orange-invert: var(--text-3) !important;
+  --tab-group-color-orange-pale: var(--text-3) !important;
+  
+  --tab-group-color-yellow: rgba(0, 0, 0, 0.0) !important;
+  --tab-group-color-yellow-invert: var(--text-3) !important;
+  --tab-group-color-yellow-pale: var(--text-3) !important;
+  
+  --tab-group-color-pink: rgba(0, 0, 0, 0.0) !important;
+  --tab-group-color-pink-invert: var(--text-3) !important;
+  --tab-group-color-pink-pale: var(--text-3) !important;
+  
+  --tab-group-color-green: rgba(0, 0, 0, 0.0) !important;
+  --tab-group-color-green-invert: var(--text-3) !important;
+  --tab-group-color-green-pale: var(--text-3) !important;
+  
+  --tab-group-color-gray: rgba(0, 0, 0, 0.0) !important;
+  --tab-group-color-gray-invert: var(--text-3) !important;
+  --tab-group-color-gray-pale: var(--text-3) !important;
+  
+  --tab-group-color-red: rgba(0, 0, 0, 0.0) !important;
+  --tab-group-color-red-invert: var(--text-3) !important;
+  --tab-group-color-red-pale: var(--text-3) !important;
 }
