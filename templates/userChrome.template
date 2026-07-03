@@ -1,0 +1,61 @@
+$HOME/projects/themes/dist/userChrome.css
+/* color options */
+:root {
+  /* text colors */
+  --text-0: var(--bg-4); /* text on colored elements */
+  --text-1: %(l-adj "2" "$fg" | fhex)%; /* other normally white text */
+  --text-2: %(l-adj "1" "$fg" | fhex)%; /* headings and important text */
+  --text-3: %(fhex "$fg")%; /* normal text */
+  --text-4: %(l-adj "-1" "$fg" | fhex)%; /* icon buttons and channels */
+  --text-5: %(l-adj "-2" "$fg" | fhex)%; /* muted channels/chats and timestamps */
+
+  /* background and dark colors */
+  --bg-1: %(l-adj "3" "$bg" | fhex)%; /* dark buttons when clicked */
+  --bg-2: %(l-adj "2" "$bg" | fhex)%; /* dark buttons */
+  --bg-3: %(l-adj "1" "$bg" | fhex)%; /* spacing, secondary elements */
+  --bg-4: %(fhex "$bg")%; /* main background color */
+
+  /* accent colors */
+  --accent-1: %(fhex "$accent")%; /* links and other accent text */
+  --accent-2: %(l-adj "-1" "$accent" | fhex)%; /* small accent elements */
+  --accent-3: %(l-adj "-2" "$accent" | fhex)%; /* accent buttons */
+  --accent-4: %(l-adj "-3" "$accent" | fhex)%; /* accent buttons when hovered */
+  --accent-5: %(l-adj "-4" "$accent" | fhex)%; /* accent buttons when clicked */
+
+  /* base colors */
+  --red-1: %(fhex "$red")%;
+  --red-2: %(l-adj "-1" "$red" | fhex)%;
+  --red-3: %(l-adj "-2" "$red" | fhex)%;
+  --red-4: %(l-adj "-3" "$red" | fhex)%;
+  --red-5: %(l-adj "-4" "$red" | fhex)%;
+
+  --green-1: %(fhex "$green")%;
+  --green-2: %(l-adj "-1" "$green" | fhex)%;
+  --green-3: %(l-adj "-2" "$green" | fhex)%;
+  --green-4: %(l-adj "-3" "$green" | fhex)%;
+  --green-5: %(l-adj "-4" "$green" | fhex)%;
+
+  --blue-1: %(fhex "$blue")%;
+  --blue-2: %(l-adj "-1" "$blue" | fhex)%;
+  --blue-3: %(l-adj "-2" "$blue" | fhex)%;
+  --blue-4: %(l-adj "-3" "$blue" | fhex)%;
+  --blue-5: %(l-adj "-4" "$blue" | fhex)%;
+
+  --yellow-1: %(fhex "$yellow")%;
+  --yellow-2: %(l-adj "-1" "$yellow" | fhex)%;
+  --yellow-3: %(l-adj "-2" "$yellow" | fhex)%;
+  --yellow-4: %(l-adj "-3" "$yellow" | fhex)%;
+  --yellow-5: %(l-adj "-4" "$yellow" | fhex)%;
+
+  --purple-1: %(fhex "$magenta")%;
+  --purple-2: %(l-adj "-1" "$magenta" | fhex)%;
+  --purple-3: %(l-adj "-2" "$magenta" | fhex)%;
+  --purple-4: %(l-adj "-3" "$magenta" | fhex)%;
+  --purple-5: %(l-adj "-4" "$magenta" | fhex)%;
+
+  --toolbox-background-color: var(--bg-4) !important;
+  --toolbar-background-color: var(--bg-3) !important;
+  --tab-background-color-selected: var(--bg-3) !important;
+  --toolbarbutton-icon-fill: var(--text-3) !important;
+  --toolbar-text-color: var(--text-3) !important;
+}
