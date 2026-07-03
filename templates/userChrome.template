@@ -58,6 +58,7 @@ $HOME/projects/themes/dist/userChrome.css
   --toolbox-text-color: var(--text-3) !important;
   --toolbox-text-color-inactive: var(--text-3) !important;
   --tab-selected-textcolor: var(--text-2) !important;
+  --tab-selected-shadow: !important;
 
   --toolbar-background-color: var(--bg-3) !important;
   --tab-background-color-selected: var(--bg-3) !important;
