@@ -69,6 +69,11 @@ $HOME/projects/themes/dist/userChrome.css
   --toolbar-field-text-color-focus: var(--accent-1) !important;
   --toolbar-field-background-color: rgba(0, 0, 0, 0.0) !important;
 
+  /* Panels */
+  --panel-background-color: var(--bg-4) !important;
+  --panel-text-color: var(--text-3) !important;
+  --panel-border-color: var(--bg-2) !important;
+
   /* Tab Groups */
   --tab-group-label-text-dark: var(--bg-4) !important;
   
