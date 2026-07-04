@@ -1,0 +1,44 @@
+$HOME/.config/qBittorrent/themes/default/config.json
+{
+    "colors.dark": {
+        "TransferList.CheckingDownloading": "%(fhex "$green")%",
+        "TransferList.CheckingResumeData": "%(fhex "$green")%",
+        "TransferList.CheckingUploading": "%(fhex "$green")%",
+        "TransferList.Downloading": "%(fhex "$green")%",
+        "TransferList.DownloadingMetadata": "%(fhex "$green")%",
+        "TransferList.Error": "%(fhex "$red")%",
+        "TransferList.ForcedDownloading": "%(fhex "$green")%",
+        "TransferList.ForcedDownloadingMetadata": "%(fhex "$green")%",
+        "TransferList.ForcedUploading": "%(fhex "$blue")%",
+        "TransferList.MissingFiles": "%(fhex "$red")%",
+        "TransferList.Moving": "%(fhex "$green")%",
+        "TransferList.QueuedDownloading": "%(fhex "$yellow")%",
+        "TransferList.QueuedUploading": "%(fhex "$yellow")%",
+        "TransferList.StalledDownloading": "%(l-adj "-2" "$green" | fhex)%",
+        "TransferList.StalledUploading": "%(l-adj "-2" "$blue" | fhex)%",
+        "TransferList.StoppedDownloading": "%(l-adj "-2" "$fg" | fhex)%",
+        "TransferList.StoppedUploading": "%(fhex "$magenta")%",
+        "TransferList.Uploading": "%(fhex "$blue")%"
+    },
+    "colors.light": {
+        "TransferList.CheckingDownloading": "%(fhex "$green")%",
+        "TransferList.CheckingResumeData": "%(fhex "$green")%",
+        "TransferList.CheckingUploading": "%(fhex "$green")%",
+        "TransferList.Downloading": "%(fhex "$green")%",
+        "TransferList.DownloadingMetadata": "%(fhex "$green")%",
+        "TransferList.Error": "%(fhex "$red")%",
+        "TransferList.ForcedDownloading": "%(fhex "$green")%",
+        "TransferList.ForcedDownloadingMetadata": "%(fhex "$green")%",
+        "TransferList.ForcedUploading": "%(fhex "$blue")%",
+        "TransferList.MissingFiles": "%(fhex "$red")%",
+        "TransferList.Moving": "%(fhex "$green")%",
+        "TransferList.QueuedDownloading": "%(fhex "$yellow")%",
+        "TransferList.QueuedUploading": "%(fhex "$yellow")%",
+        "TransferList.StalledDownloading": "%(l-adj "-2" "$green" | fhex)%",
+        "TransferList.StalledUploading": "%(l-adj "-2" "$blue" | fhex)%",
+        "TransferList.StoppedDownloading": "%(l-adj "-2" "$fg" | fhex)%",
+        "TransferList.StoppedUploading": "%(fhex "$magenta")%",
+        "TransferList.Uploading": "%(fhex "$blue")%"
+    },
+    "version": 2
+}
