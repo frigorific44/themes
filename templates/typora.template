@@ -1,10 +1,10 @@
 $HOME/.config/Typora/themes/${theme_name}.css
 :root {
-  --side-bar-bg-color: #1b1b1b;
-  --bg-color: #1b1b1b; /*change background*/
-  --control-text-color: #ddd;
+  --bg-color: %(fhex "$bg")%; /*change background*/
+  --side-bar-bg-color: var(--bg-color);
+  --text-color: %(fhex "$fg")%; /*change text color*/
+  --control-text-color: var(--text-color);
   --monospace: monospace; /*monospace font for codes, fences*/
-  --text-color: #ddd; /*change text color*/
   --item-hover-bg-color: #333; /*background of control items when hover, like menu in sidebar*/
   --item-hover-text-color: inherit;
   --active-file-bg-color: #444; /*background color if list item in file tree or file list*/
@@ -28,7 +28,7 @@ $HOME/.config/Typora/themes/${theme_name}.css
 .cm-s-typora-default {
   /*styles for h1~h6 in source code mode*/
   font-family: monospace;
-  color: #ddd;
+  color: var(--text-color);
 }
 
 /* selected text and cursor */
@@ -182,7 +182,7 @@ body {
 }
 body {
   font-family: "Vollkorn", Palatino, Times;
-  color: #ddd;
+  color: var(--text-color);
   line-height: 1.4;
   text-align: justify;
 }
@@ -272,7 +272,7 @@ blockquote p {
 code,
 pre {
   background: #222;
-  color: #ddd;
+  color: var(--text-color);
   border: 2px solid #444;
   padding: 0.3em;
   padding-top: 0.15em;
@@ -280,7 +280,7 @@ pre {
   font-size: 0.8em;
 }
 .md-fences {
-  color: #ddd;
+  color: var(--text-color);
   background: #222;
   border: 1px solid #aaa;
   margin: 0 0 20px;
@@ -301,7 +301,7 @@ a img {
 }
 h1 a,
 h1 a:hover {
-  color: #ddd;
+  color: var(--text-color);
   text-decoration: none;
 }
 hr {
@@ -325,7 +325,7 @@ table td {
   padding: 8px;
   line-height: 1.333333rem;
   vertical-align: top;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid var(--text-color);
 }
 table th {
   font-weight: bold;
@@ -361,15 +361,15 @@ table tbody + tbody {
   vertical-align: middle;
   text-align: center;
   color: #444;
-  background-color: #1b1b1b;
+  background-color: var(--bg-color);
 }
 
 .md-task-list-item > input:checked:before,
 .md-task-list-item > input[checked]:before {
-  color: #ddd;
+  color: var(--text-color);
 }
 .md-tag {
-  color: #1b1b1b;
+  color: var(--bg-color);
   font: inherit;
 }
 #write pre.md-meta-block {
@@ -378,15 +378,15 @@ table tbody + tbody {
 }
 #write pre.md-meta-block {
   white-space: pre;
-  background: #1b1b1b;
+  background: var(--bg-color);
   border: 0px;
   color: #666;
 
   width: 100vw;
   max-width: calc(100% + 60px);
   margin-left: -30px;
-  border-left: 30px #1b1b1b solid;
-  border-right: 30px #1b1b1b solid;
+  border-left: 30px var(--bg-color) solid;
+  border-right: 30px var(--bg-color) solid;
 
   margin-bottom: 2em;
   margin-top: -1.3333333333333rem;
@@ -413,7 +413,7 @@ table tbody + tbody {
 }
 
 .outline-expander:before {
-  color: #1b1b1b;
+  color: var(--bg-color);
   font-size: 14px;
   top: auto;
   content: "\f0da";
@@ -563,7 +563,7 @@ mark {
 
 kbd {
   background: #222;
-  color: #ddd;
+  color: var(--text-color);
   border-color: #444;
   box-shadow: 0 2px 0 #333;
 }
