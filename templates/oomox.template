@@ -2,7 +2,7 @@ $HOME/.config/oomox/colors/seasonal
 ACCENT_BG=%(ftrimhex "$accent")%
 BG=%(ftrimhex "$bg")%
 BTN_BG=%(ftrimhex "$accent")%
-BTN_FG=%(ftrimhex "$bg")%
+BTN_FG=%(l-adj "-2" "$bg" | ftrimhex)%
 BTN_OUTLINE_OFFSET=1
 BTN_OUTLINE_WIDTH=2
 CARET1_FG=%(ftrimhex "$fg")%
