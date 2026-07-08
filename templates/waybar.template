@@ -152,13 +152,13 @@ label:focus {
     /* background-color: #90b1b1; */
 /* } */
 
-#wireplumber {
-    background-color: #fff0f5;
-}
+/* #wireplumber { */
+/*     background-color: #fff0f5; */
+/* } */
 
-#wireplumber.muted {
-    background-color: #f53c3c;
-}
+/* #wireplumber.muted { */
+/*     background-color: #f53c3c; */
+/* } */
 
 #custom-media {
     background-color: #66cc99;
