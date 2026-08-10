@@ -1,0 +1,4 @@
+$HOME/.config/seasonal-tree/config
+background = "%(l-adj "1" "$bg" | fhex)%"
+tree = "%(fhex "$fg")%"
+shadow = "%(l-adj "-3" "$fg" | fhex)%"
