@@ -160,6 +160,15 @@ label:focus {
 /*     background-color: #f53c3c; */
 /* } */
 
+#custom-corner {
+    font-size: 13px;
+    padding: 0 0px;
+}
+
+#custom-corner:hover {
+    background-color: #231b12;
+}
+
 #custom-media {
     background-color: #66cc99;
     min-width: 100px;
