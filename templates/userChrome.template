@@ -84,40 +84,51 @@ $HOME/projects/themes/dist/userChrome.css
 
   /* Tab Groups */
   --tab-group-label-text-dark: var(--bg-4) !important;
-  
-  --tab-group-color-blue: rgba(0, 0, 0, 0.0) !important;
-  --tab-group-color-blue-invert: var(--text-3) !important;
-  --tab-group-color-blue-pale: var(--text-3) !important;
-  
-  --tab-group-color-purple: rgba(0, 0, 0, 0.0) !important;
-  --tab-group-color-purple-invert: var(--text-3) !important;
-  --tab-group-color-purple-pale: var(--text-3) !important;
-  
-  --tab-group-color-cyan: rgba(0, 0, 0, 0.0) !important;
-  --tab-group-color-cyan-invert: var(--text-3) !important;
-  --tab-group-color-cyan-pale: var(--text-3) !important;
-  
-  --tab-group-color-orange: rgba(0, 0, 0, 0.0) !important;
-  --tab-group-color-orange-invert: var(--text-3) !important;
-  --tab-group-color-orange-pale: var(--text-3) !important;
-  
-  --tab-group-color-yellow: rgba(0, 0, 0, 0.0) !important;
-  --tab-group-color-yellow-invert: var(--text-3) !important;
-  --tab-group-color-yellow-pale: var(--text-3) !important;
-  
-  --tab-group-color-pink: rgba(0, 0, 0, 0.0) !important;
-  --tab-group-color-pink-invert: var(--text-3) !important;
-  --tab-group-color-pink-pale: var(--text-3) !important;
-  
-  --tab-group-color-green: rgba(0, 0, 0, 0.0) !important;
-  --tab-group-color-green-invert: var(--text-3) !important;
-  --tab-group-color-green-pale: var(--text-3) !important;
-  
-  --tab-group-color-gray: rgba(0, 0, 0, 0.0) !important;
-  --tab-group-color-gray-invert: var(--text-3) !important;
-  --tab-group-color-gray-pale: var(--text-3) !important;
-  
-  --tab-group-color-red: rgba(0, 0, 0, 0.0) !important;
-  --tab-group-color-red-invert: var(--text-3) !important;
-  --tab-group-color-red-pale: var(--text-3) !important;
+
+  /* Uncollapsed */
+  --tab-group-blue-text: var(--bg-4) !important;
+  --tab-group-blue: var(--text-3) !important;
+  /* Collapsed */
+  --tab-group-blue-invert: var(--bg-4) !important;
+  --tab-group-blue-pale: var(--text-3) !important;
+
+  --tab-group-purple-text: var(--bg-4) !important;
+  --tab-group-purple: var(--text-3) !important;
+  --tab-group-purple-invert: var(--bg-4) !important;
+  --tab-group-purple-pale: var(--text-3) !important;
+
+  --tab-group-cyan-text: var(--bg-4) !important;
+  --tab-group-cyan: var(--text-3) !important;
+  --tab-group-cyan-invert: var(--bg-4) !important;
+  --tab-group-cyan-pale: var(--text-3) !important;
+
+  --tab-group-orange-text: var(--bg-4) !important;
+  --tab-group-orange: var(--text-3) !important;
+  --tab-group-orange-invert: var(--bg-4) !important;
+  --tab-group-orange-pale: var(--text-3) !important;
+
+  --tab-group-yellow-text: var(--bg-4) !important;
+  --tab-group-yellow: var(--text-3) !important;
+  --tab-group-yellow-invert: var(--bg-4) !important;
+  --tab-group-yellow-pale: var(--text-3) !important;
+
+  --tab-group-pink-text: var(--bg-4) !important;
+  --tab-group-pink: var(--text-3) !important;
+  --tab-group-pink-invert: var(--bg-4) !important;
+  --tab-group-pink-pale: var(--text-3) !important;
+
+  --tab-group-green-text: var(--bg-4) !important;
+  --tab-group-green: var(--text-3) !important;
+  --tab-group-green-invert: var(--bg-4) !important;
+  --tab-group-green-pale: var(--text-3) !important;
+
+  --tab-group-gray-text: var(--bg-4) !important;
+  --tab-group-gray: var(--text-3) !important;
+  --tab-group-gray-invert: var(--bg-4) !important;
+  --tab-group-gray-pale: var(--text-3) !important;
+
+  --tab-group-red-text: var(--bg-4) !important;
+  --tab-group-red: var(--text-3) !important;
+  --tab-group-red-invert: var(--bg-4) !important;
+  --tab-group-red-pale: var(--text-3) !important;
 }
