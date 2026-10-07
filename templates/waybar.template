@@ -1,7 +1,7 @@
 $HOME/.config/waybar/style.css
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: FontAwesome, "SpaceMono Nerd Font Propo", "Space Mono", Roboto, Helvetica, Arial, sans-serif;
+    font-family: "DaddyTimeMono Nerd Font Propo", FontAwesome, "SpaceMono Nerd Font Propo", "Space Mono", Roboto, Helvetica, Arial, sans-serif;
     font-size: 13px;
 }
 
@@ -63,6 +63,10 @@ tooltip label {
 
 #workspaces button.urgent {
     background-color: %(fhex "$red")%;
+}
+
+#workspaces button:not(.current_output) {
+  opacity: 0.3;
 }
 
 #mode {
