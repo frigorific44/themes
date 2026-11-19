@@ -1,0 +1,5 @@
+$HOME/.config/mpv/script-opts/context_menu.conf
+menu_outline_color=%(fhex "$fg")%
+focused_color=%(fhex "$bg")%
+focused_back_color=%(fhex "$fg")%
+disabled_color=%(l-adj "1" "$bg" | fhex)%

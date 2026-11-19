@@ -1,0 +1,21 @@
+$HOME/.config/mpv/mpv.conf
+# Black bars behind the media. The 'background' option offers color, or individually controlled tiles.
+# background-color=""
+# background-tile-color-0=""
+# background-tile-color-1=""
+
+# osd-back-color="#AF211d29"
+
+# Text color.
+osd-color="%(fhex "$fg")%"
+
+# Also serves as the bg color for menus.
+osd-outline-color="%(fhex "$bg")%"
+
+# osd-selected-color=""
+# osd-selected-outline-color=""
+# sub-back-color="#AF211d29"
+# sub-border-color="#AF211d29"
+# sub-color="#AF211d29"
+# sub-outline-color="#AF211d29"
+# sub-shadow-color="#AF211d29"
